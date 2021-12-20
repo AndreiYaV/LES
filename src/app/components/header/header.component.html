@@ -1,0 +1,15 @@
+<mat-toolbar class="header">
+  <div class="header__wrapper">
+    <div class="header__title" [routerLink]="['/']">
+      <h1 class="header__title-main">LeverX GROUP</h1>
+      <span>Employee Services</span>
+    </div>
+    <div class="header__menu">
+      <a [routerLink]="['contacts']" [routerLinkActive]="['active']">Address Book</a>
+      <a [routerLink]="['vacations']" [routerLinkActive]="['active']">Leave Requests</a>
+    </div>
+   <div class="header__actions">
+     <div class="name">Andrei Ya</div>
+   </div>
+  </div>
+</mat-toolbar>

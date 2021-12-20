@@ -1,0 +1,1241 @@
+{
+  "department": [
+    {
+      "id": "5cf29fb1e9911d68bc78aee8",
+      "name": "Administration"
+    },
+    {
+      "id": "5cf29fb1e9911d68bc78aee9",
+      "name": "Accounting"
+    },
+    {
+      "id": "5cf29fb1e9911d68bc78aeea",
+      "name": "Human Resource"
+    },
+    {
+      "id": "5cf29fb1e9911d68bc78aeeb",
+      "name": "SAP West"
+    },
+    {
+      "id": "5cf29fb1e9911d68bc78aeec",
+      "name": "SAP East"
+    },
+    {
+      "id": "5cf29fb1e9911d68bc78aeed",
+      "name": "Web & Mobile"
+    },
+    {
+      "id": "5cf29fb1e9911d68bc78aeee",
+      "name": "Sales"
+    },
+    {
+      "id": "5cf29fb1e9911d68bc78aeef",
+      "name": "Marketing"
+    },
+    {
+      "id": "5cf29fb1e9911d68bc78aef0",
+      "name": "Maintenance"
+    }
+  ],
+  "building": [
+    {
+      "id": "5cf29fb3e9911d68bc78aef2",
+      "name": "Lopatina 7a"
+    },
+    {
+      "id": "5cf29fb3e9911d68bc78aef3",
+      "name": "Kuprevicha 14"
+    },
+    {
+      "id": "5cf2a342addbe16a8d986085",
+      "name": "Lopatina 7a"
+    },
+    {
+      "id": "5cf2a342addbe16a8d986086",
+      "name": "Kuprevicha 14"
+    },
+    {
+      "id": "5cf2a5ded3c0ec6c2cb59d4f",
+      "name": "Lopatina 7a"
+    },
+    {
+      "id": "5cf2a5ded3c0ec6c2cb59d50",
+      "name": "Kuprevicha 14"
+    },
+    {
+      "id": "5de11e83786f9166aa09ce96",
+      "name": "Oginskogo 6"
+    },
+    {
+      "id": "5f9fd6623eed0856a2ba39af",
+      "name": "Oleny Telihy 6"
+    },
+    {
+      "id": "600e8c00394b0a757fa73c28",
+      "name": "Massiv Kiyot 68a"
+    },
+    {
+      "id": "602102b8dcc8105a82ccc47f",
+      "name": "Nizhnyaya Krasnosel'skaya 35-9"
+    },
+    {
+      "id": "606acfaa16597a2bbe4f72f7",
+      "name": "Fedjuninskogo 17"
+    },
+    {
+      "id": "60bf1e2ec7f59866f18ce9b0",
+      "name": "Swobodna 1"
+    },
+    {
+      "id": "619cf82b056ed76730469c23",
+      "name": "Respubliki 1/2"
+    },
+    {
+      "id": "61a172e44b367b1fee4aa98a",
+      "name": "Janki Kupaly 87"
+    },
+    {
+      "id": "61a7ce864438073821cbc55a",
+      "name": "Bogdana Khmelnitskogo 30"
+    }
+  ],
+  "room": [
+    {
+      "id": "618b8e3ac032033e6786a447",
+      "name": "8-10",
+      "building_id": "606acfaa16597a2bbe4f72f7"
+    },
+    {
+      "id": "618b8e73f4e47a3e61117d6b",
+      "name": "8-11",
+      "building_id": "606acfaa16597a2bbe4f72f7"
+    },
+    {
+      "id": "606acfcc16597a2bbe4f72f9",
+      "name": "8-12",
+      "building_id": "606acfaa16597a2bbe4f72f7"
+    },
+    {
+      "id": "606acfc316597a2bbe4f72f8",
+      "name": "8-14",
+      "building_id": "606acfaa16597a2bbe4f72f7"
+    },
+    {
+      "id": "619cf4949847dd0cb51fc6bc",
+      "name": "9-12",
+      "building_id": "606acfaa16597a2bbe4f72f7"
+    },
+    {
+      "id": "619cf4c464e3fe391bfc63c8",
+      "name": "9-14",
+      "building_id": "606acfaa16597a2bbe4f72f7"
+    },
+    {
+      "id": "60d1981673c222653a5dec64",
+      "name": "Service",
+      "building_id": "606acfaa16597a2bbe4f72f7"
+    },
+    {
+      "id": "61a173bd4b367b1fee4aa98b",
+      "name": "601",
+      "building_id": "61a172e44b367b1fee4aa98a"
+    },
+    {
+      "id": "61a753a1502c7f6bafdf90c1",
+      "name": "602",
+      "building_id": "61a172e44b367b1fee4aa98a"
+    },
+    {
+      "id": "5f62259c9d021246214aab27",
+      "name": "101",
+      "building_id": "5cf29fb3e9911d68bc78aef3"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d6b",
+      "name": "501",
+      "building_id": "5cf29fb3e9911d68bc78aef3"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d6c",
+      "name": "502",
+      "building_id": "5cf29fb3e9911d68bc78aef3"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d6d",
+      "name": "503",
+      "building_id": "5cf29fb3e9911d68bc78aef3"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d6e",
+      "name": "504",
+      "building_id": "5cf29fb3e9911d68bc78aef3"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d6f",
+      "name": "505",
+      "building_id": "5cf29fb3e9911d68bc78aef3"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d70",
+      "name": "506",
+      "building_id": "5cf29fb3e9911d68bc78aef3"
+    },
+    {
+      "id": "5ec3dd6c7833eb5338fdfdfe",
+      "name": "507",
+      "building_id": "5cf29fb3e9911d68bc78aef3"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d71",
+      "name": "600",
+      "building_id": "5cf29fb3e9911d68bc78aef3"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d72",
+      "name": "601",
+      "building_id": "5cf29fb3e9911d68bc78aef3"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d73",
+      "name": "602",
+      "building_id": "5cf29fb3e9911d68bc78aef3"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d74",
+      "name": "603",
+      "building_id": "5cf29fb3e9911d68bc78aef3"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d75",
+      "name": "604",
+      "building_id": "5cf29fb3e9911d68bc78aef3"
+    },
+    {
+      "id": "5ec3dd817833eb5338fdfdff",
+      "name": "605",
+      "building_id": "5cf29fb3e9911d68bc78aef3"
+    },
+    {
+      "id": "5ec3ddaf7833eb5338fdfe00",
+      "name": "606",
+      "building_id": "5cf29fb3e9911d68bc78aef3"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d76",
+      "name": "N/A",
+      "building_id": "5cf29fb3e9911d68bc78aef3"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d77",
+      "name": "Reception",
+      "building_id": "5cf29fb3e9911d68bc78aef3"
+    },
+    {
+      "id": "60d09eddb6b695491f1a8f1d",
+      "name": "Service",
+      "building_id": "5cf29fb3e9911d68bc78aef3"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d7e",
+      "name": "301",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5fae64a93eed0856a2ba3ab3",
+      "name": "301.1",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60daa",
+      "name": "302.1",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60dab",
+      "name": "302.2",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d80",
+      "name": "303",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60da9",
+      "name": "304.1",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60dad",
+      "name": "304.2",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60dac",
+      "name": "304.3",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d82",
+      "name": "401",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d83",
+      "name": "402",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d84",
+      "name": "403",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60db0",
+      "name": "404.1",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5ec3d08b7833eb5338fdfdda",
+      "name": "404.2",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d85",
+      "name": "405",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d86",
+      "name": "501",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d87",
+      "name": "502",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d88",
+      "name": "503",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d89",
+      "name": "504",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d8a",
+      "name": "505",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d8c",
+      "name": "601",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d8d",
+      "name": "602",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5ec3d09f7833eb5338fdfddb",
+      "name": "700",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d8e",
+      "name": "702",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d8f",
+      "name": "703",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d90",
+      "name": "704",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d91",
+      "name": "705",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5ec3d0a97833eb5338fdfddc",
+      "name": "800",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d92",
+      "name": "801",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d93",
+      "name": "802",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d94",
+      "name": "803",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d95",
+      "name": "805",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "61a7c9f5459c8a410dc6a455",
+      "name": "902",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5ec3cf7d7833eb5338fdfdd2",
+      "name": "1000",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d98",
+      "name": "1002",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d99",
+      "name": "1003",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5ec3cfbb7833eb5338fdfdd3",
+      "name": "1004.1",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5ec3cfcb7833eb5338fdfdd4",
+      "name": "1004.2",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5ec3cfd97833eb5338fdfdd5",
+      "name": "1004.3",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d9a",
+      "name": "1005",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d9b",
+      "name": "1100",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d9c",
+      "name": "1102",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d9d",
+      "name": "1103",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e986e214cce552b92bb4449",
+      "name": "1201",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5f3b7e6d24764c09510dd6e7",
+      "name": "1401",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d9f",
+      "name": "1402",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60da0",
+      "name": "1403",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60da1",
+      "name": "1404",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5ec3d0077833eb5338fdfdd6",
+      "name": "1601",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60da4",
+      "name": "1602",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60da5",
+      "name": "1603",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5ec3d0147833eb5338fdfdd7",
+      "name": "1604",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5ec3d0257833eb5338fdfdd8",
+      "name": "1605",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5ec3d02d7833eb5338fdfdd9",
+      "name": "1606",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60da6",
+      "name": "1607",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60da7",
+      "name": "1608",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60da8",
+      "name": "N/A",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60daf",
+      "name": "Reception",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "60d09ecfb6b695491f1a8f1c",
+      "name": "Service",
+      "building_id": "5cf29fb3e9911d68bc78aef2"
+    },
+    {
+      "id": "600ea2b6394b0a757fa73c36",
+      "name": "100",
+      "building_id": "600e8c00394b0a757fa73c28"
+    },
+    {
+      "id": "60210a35dcc8105a82ccc481",
+      "name": "100",
+      "building_id": "602102b8dcc8105a82ccc47f"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d7a",
+      "name": "102",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d15c7833eb5338fdfddf",
+      "name": "102.1",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d1687833eb5338fdfde0",
+      "name": "104",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5fae649c3eed0856a2ba3ab2",
+      "name": "301",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "6051dd8d90d9a21cf9479488",
+      "name": "301.1",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5fae64b33eed0856a2ba3ab4",
+      "name": "302",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5fae64be3eed0856a2ba3ab5",
+      "name": "303",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5fae64ca3eed0856a2ba3ab6",
+      "name": "304",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5f9fd7e03eed0856a2ba39b0",
+      "name": "305",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5fae64d43eed0856a2ba3ab7",
+      "name": "306",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5e46afbc89c86d5b44bfebec",
+      "name": "701",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5e46afcd89c86d5b44bfebed",
+      "name": "701.1",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5e46afda89c86d5b44bfebee",
+      "name": "701.2",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5e46afee89c86d5b44bfebef",
+      "name": "702",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5e46aff789c86d5b44bfebf0",
+      "name": "703",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5e46b00089c86d5b44bfebf1",
+      "name": "704",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5e46b00889c86d5b44bfebf2",
+      "name": "705",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5e46b01789c86d5b44bfebf3",
+      "name": "706",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5e46b02089c86d5b44bfebf4",
+      "name": "706.1",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5e46b02889c86d5b44bfebf5",
+      "name": "708",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5e46b02f89c86d5b44bfebf6",
+      "name": "708.1",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d1de7833eb5338fdfde1",
+      "name": "801",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d1ee7833eb5338fdfde2",
+      "name": "801.1",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d1fc7833eb5338fdfde3",
+      "name": "801.2",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d2127833eb5338fdfde4",
+      "name": "802",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d2587833eb5338fdfde5",
+      "name": "803",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d2737833eb5338fdfde6",
+      "name": "804",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d2857833eb5338fdfde7",
+      "name": "806",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d29e7833eb5338fdfde8",
+      "name": "806.1",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d2ab7833eb5338fdfde9",
+      "name": "808",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d3cd7833eb5338fdfdee",
+      "name": "810",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d3f47833eb5338fdfdef",
+      "name": "901",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d67e7833eb5338fdfdf7",
+      "name": "902",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d69e7833eb5338fdfdf8",
+      "name": "903",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d2e37833eb5338fdfdec",
+      "name": "904",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d6c47833eb5338fdfdf9",
+      "name": "905",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d6db7833eb5338fdfdfa",
+      "name": "906",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d4237833eb5338fdfdf0",
+      "name": "906.1",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ebcf9be9bad6d273650a161",
+      "name": "907",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ebcf9c59bad6d273650a162",
+      "name": "908",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ebcf9cf9bad6d273650a163",
+      "name": "908.1",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d4657833eb5338fdfdf2",
+      "name": "909",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5fb23aff3eed0856a2ba3ac6",
+      "name": "910",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d6f97833eb5338fdfdfb",
+      "name": "911",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5ec3d4817833eb5338fdfdf3",
+      "name": "913",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5e15f94ecb738109e6c60d7b",
+      "name": "N/A",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "5fcdea9ae828d4494ad28d33",
+      "name": "Reception",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "60d09ee7b6b695491f1a8f1e",
+      "name": "Service",
+      "building_id": "5de11e83786f9166aa09ce96"
+    },
+    {
+      "id": "602ccfacb08ec76aa0925697",
+      "name": "101",
+      "building_id": "5f9fd6623eed0856a2ba39af"
+    },
+    {
+      "id": "602cd000b08ec76aa092569b",
+      "name": "102",
+      "building_id": "5f9fd6623eed0856a2ba39af"
+    },
+    {
+      "id": "602ccfc0b08ec76aa0925699",
+      "name": "201",
+      "building_id": "5f9fd6623eed0856a2ba39af"
+    },
+    {
+      "id": "602ccfcbb08ec76aa092569a",
+      "name": "202",
+      "building_id": "5f9fd6623eed0856a2ba39af"
+    },
+    {
+      "id": "60d09f0ab6b695491f1a8f1f",
+      "name": "Service",
+      "building_id": "5f9fd6623eed0856a2ba39af"
+    },
+    {
+      "id": "61a4e941502c7f6bafdf9071",
+      "name": "801",
+      "building_id": "619cf82b056ed76730469c23"
+    },
+    {
+      "id": "619cf9f2056ed76730469c24",
+      "name": "802",
+      "building_id": "619cf82b056ed76730469c23"
+    },
+    {
+      "id": "61a4fd95b8073b2aefd85356",
+      "name": "803",
+      "building_id": "619cf82b056ed76730469c23"
+    },
+    {
+      "id": "61a4fdc04b367b1fee4aa9eb",
+      "name": "805",
+      "building_id": "619cf82b056ed76730469c23"
+    },
+    {
+      "id": "61a4fde9b8073b2aefd85357",
+      "name": "807",
+      "building_id": "619cf82b056ed76730469c23"
+    },
+    {
+      "id": "61a4fe08502c7f6bafdf907c",
+      "name": "808",
+      "building_id": "619cf82b056ed76730469c23"
+    },
+    {
+      "id": "619fb0a4af5aa6523c14aec6",
+      "name": "Reception",
+      "building_id": "619cf82b056ed76730469c23"
+    },
+    {
+      "id": "619fb00664e3fe391bfc6421",
+      "name": "Service",
+      "building_id": "619cf82b056ed76730469c23"
+    },
+    {
+      "id": "60bf204cc7f59866f18ce9b1",
+      "name": "100",
+      "building_id": "60bf1e2ec7f59866f18ce9b0"
+    }
+  ],
+  "request_type": [
+    {
+      "id": "3432r23r2fewfwfwefe2",
+      "name": "Vacation"
+    },
+    {
+      "id": "343224fr2fewfwfwefe2",
+      "name": "Sick leave"
+    },
+    {
+      "id": "3431sf3r2fewfwfwefe2",
+      "name": "Own expense leave"
+    },
+    {
+      "id": "3415gdw112ewfwfwefe2",
+      "name": "Military leave"
+    }
+  ],
+  "employee": [
+    {
+      "id": "0c00aed6-7147-42b6-9ed2-b938c5537248",
+      "name": "Dzmitry",
+      "is_active": true,
+      "last_name": "Budayeu",
+      "room": "5e15f94ecb738109e6c60d8c",
+      "department": "5cf29fb1e9911d68bc78aeed",
+      "requests": [
+        {
+          "id": "dfhtef421f",
+          "type_id": "3432r23r2fewfwfwefe2",
+          "start_date": "2021-12-13T00:00:00.000Z",
+          "end_date": "2021-12-13T23:59:59.000Z",
+          "days": 1,
+          "created": "2021-12-12T07:37:43.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6512b08b-7e2f-4b5a-abb9-44e1e1a83b8b",
+      "name": "Maksim",
+      "is_active": true,
+      "last_name": "Kazhamiaka",
+      "room": "5e15f94ecb738109e6c60d8c",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "c10be903-bf4b-4e67-b772-11103f6cecd0",
+      "name": "Lizaveta",
+      "is_active": false,
+      "last_name": "Kuryla",
+      "room": "5e15f94ecb738109e6c60d8c",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "32f64ecf-5d69-4609-a7dd-238773754b55",
+      "name": "Yury",
+      "is_active": true,
+      "last_name": "Matveichuk",
+      "room": "5e15f94ecb738109e6c60d8c",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "1e012349-7720-452d-bcc6-cc6106009ead",
+      "name": "Raman",
+      "is_active": true,
+      "last_name": "Matylkou",
+      "room": "5e15f94ecb738109e6c60d8c",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "51062a31-d1b0-4027-a9cc-2e85276eb212",
+      "name": "Kanstantsin",
+      "is_active": true,
+      "last_name": "Mikhaliukovich",
+      "room": "5e15f94ecb738109e6c60d8c",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "e67e357f-ab64-43d5-91f9-88e2f5ecda84",
+      "name": "Sofya",
+      "is_active": true,
+      "last_name": "Novikava",
+      "room": "5e15f94ecb738109e6c60d8c",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "72cf0df2-62d1-4541-9367-abcadc7c1b56",
+      "name": "Anastasiya",
+      "is_active": true,
+      "last_name": "Perminava",
+      "room": "5e15f94ecb738109e6c60d8c",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "10f2ff6c-443c-4919-8de4-b2bc9d1bda3f",
+      "name": "Marat",
+      "is_active": true,
+      "last_name": "Serhiyevich",
+      "room": "5e15f94ecb738109e6c60d8c",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "f6055c06-ae5a-48a5-80b5-949557b2c88b",
+      "name": "Pavel",
+      "is_active": true,
+      "last_name": "Stoliar",
+      "room": "5e15f94ecb738109e6c60d8c",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "df063773-c80d-46b5-8bad-c63a51e3772d",
+      "name": "Elizaveta",
+      "is_active": true,
+      "last_name": "Tukaeva",
+      "room": "5e15f94ecb738109e6c60d8c",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "50c34ef4-9e7e-4cd9-b2d7-17b8b6aa62f1",
+      "name": "Uladzislau",
+      "is_active": true,
+      "last_name": "Vavilau",
+      "room": "5e15f94ecb738109e6c60d8c",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "15a0429d-9db2-4e1a-a8f3-f4da63b03016",
+      "name": "Andrei",
+      "is_active": true,
+      "last_name": "Yakimenka",
+      "room": "5e15f94ecb738109e6c60d8c",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "604279a7-b823-40a9-bd66-f6b60b4a7343",
+      "name": "Dziyana",
+      "is_active": true,
+      "last_name": "Yasiuchenia",
+      "room": "5e15f94ecb738109e6c60d8c",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "14230a03-a9d7-43d9-b137-eeec89c9922a",
+      "name": "Aliaksandr",
+      "is_active": true,
+      "last_name": "Chyrtsov",
+      "room": "5e15f94ecb738109e6c60d8e",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "b3987d24-4954-4257-b5cb-9e8be2bea6be",
+      "name": "Mikhail",
+      "is_active": true,
+      "last_name": "Dryk",
+      "room": "5e15f94ecb738109e6c60d8e",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "3999630d-cf3b-476f-8b33-700266a34997",
+      "name": "Vadzim",
+      "is_active": true,
+      "last_name": "Haupt",
+      "room": "5e15f94ecb738109e6c60d8e",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "51b42025-2b73-475b-9851-a559bec07831",
+      "name": "Lizaveta",
+      "is_active": true,
+      "last_name": "Klimchenia",
+      "room": "5e15f94ecb738109e6c60d8e",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "9814909d-2dbc-47c3-b963-a79762e50a81",
+      "name": "Artyom",
+      "is_active": true,
+      "last_name": "Kondratskiy",
+      "room": "5e15f94ecb738109e6c60d8e",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "472944fe-f5d2-43e9-8792-7b0282c1ddfe",
+      "name": "Raman",
+      "is_active": true,
+      "last_name": "Kukla",
+      "room": "5e15f94ecb738109e6c60d8e",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "11338238-e04e-4ec5-8aed-af52f3e7652f",
+      "name": "Maryia",
+      "is_active": true,
+      "last_name": "Kuptsevich",
+      "room": "5e15f94ecb738109e6c60d8e",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "ec2c47e4-80c3-419d-a373-0a5216b629a7",
+      "name": "Uladzislau",
+      "is_active": true,
+      "last_name": "Liavonchyk",
+      "room": "5e15f94ecb738109e6c60d8e",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "703336fd-61bf-46a9-9988-5c5051b607f1",
+      "name": "Alina",
+      "is_active": true,
+      "last_name": "Sukharebraya",
+      "room": "5e15f94ecb738109e6c60d8e",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "ba52d48d-a703-454a-95f6-3fab6196a09f",
+      "name": "Liubava",
+      "is_active": true,
+      "last_name": "Svistova",
+      "room": "5e15f94ecb738109e6c60d8e",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "0e179c23-4f4b-45d9-9fea-c8857c477d26",
+      "name": "Aliaksandr",
+      "is_active": true,
+      "last_name": "Vasiukhnevich",
+      "room": "5e15f94ecb738109e6c60d8e",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "bb8d095b-dcb7-4197-b059-acc57497852d",
+      "name": "Yauheni",
+      "is_active": true,
+      "last_name": "Yadzevich",
+      "room": "5e15f94ecb738109e6c60d8e",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "85a37554-236a-42a0-b323-50a1f79d541a",
+      "name": "Uladzimir",
+      "is_active": true,
+      "last_name": "Yubko",
+      "room": "5e15f94ecb738109e6c60d8e",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "d7f65d3a-58d9-4f4f-81a6-11bd561393a5",
+      "name": "Maksim",
+      "is_active": true,
+      "last_name": "Dzeviantseichyk",
+      "room": "5e15f94ecb738109e6c60d8f",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "f268bf7f-b194-4adc-864b-4355ba5868b8",
+      "name": "Siarhei",
+      "is_active": true,
+      "last_name": "Furs",
+      "room": "5e15f94ecb738109e6c60d8f",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "18a68a6a-cd85-4864-b40a-fe1d136f0ee4",
+      "name": "Maksim",
+      "is_active": true,
+      "last_name": "Haurylovich",
+      "room": "5e15f94ecb738109e6c60d8f",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "015ed438-b871-40cf-993f-3e78a98abd6e",
+      "name": "Uladzislau",
+      "is_active": false,
+      "last_name": "Holeu",
+      "room": "5e15f94ecb738109e6c60d8f",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "858b8b72-2caa-4c7f-9a97-1a41f338d937",
+      "name": "Siarhei",
+      "is_active": true,
+      "last_name": "Ilinchik",
+      "room": "5e15f94ecb738109e6c60d8f",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "e5bd6b4d-ac25-4868-8024-ec4d57f99368",
+      "name": "Dzmitry",
+      "is_active": true,
+      "last_name": "Kandratsenka",
+      "room": "5e15f94ecb738109e6c60d8f",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "0e74d3c2-59e3-4f2a-a4c7-275c21bac253",
+      "name": "Dzianis",
+      "is_active": true,
+      "last_name": "Kasabutski",
+      "room": "5e15f94ecb738109e6c60d8f",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "2a1cb000-1986-456d-b356-26138f2434bc",
+      "name": "Anastasiya",
+      "is_active": true,
+      "last_name": "Katovich",
+      "room": "5e15f94ecb738109e6c60d8f",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "59eac999-1311-447c-a928-15f120a1bb4f",
+      "name": "Yahor",
+      "is_active": true,
+      "last_name": "Khatsko",
+      "room": "5e15f94ecb738109e6c60d8f",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "3fc381aa-3b31-44e3-aafe-ef4273189d84",
+      "name": "Volha",
+      "is_active": true,
+      "last_name": "Kuvanava",
+      "room": "5e15f94ecb738109e6c60d8f",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "70945035-471b-4df5-9639-a17ac9a3f26c",
+      "name": "Veranika",
+      "is_active": true,
+      "last_name": "Marchuk",
+      "room": "5e15f94ecb738109e6c60d8f",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "8e67ed23-b25e-4b7c-bc27-8a975e7620c0",
+      "name": "Matsvei",
+      "is_active": true,
+      "last_name": "Matsiyuk",
+      "room": "5e15f94ecb738109e6c60d8f",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "f6e885f8-2fd4-411b-9bf8-1b33ef27f78f",
+      "name": "Viktoryia",
+      "is_active": true,
+      "last_name": "Pruchkouskaya",
+      "room": "5e15f94ecb738109e6c60d8f",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "12a8d4c0-8e6b-49cb-b149-fd2790bf5eac",
+      "name": "Kanstantsin",
+      "is_active": true,
+      "last_name": "Pshanichny",
+      "room": "5e15f94ecb738109e6c60d8f",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "245c9305-1c7c-4590-9805-dea6dc338a9c",
+      "name": "Andrei",
+      "is_active": false,
+      "last_name": "Ratkevich",
+      "room": "5e15f94ecb738109e6c60d8f",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    },
+    {
+      "id": "4928f9f0-076d-4ded-aaf8-6ba90c88dea3",
+      "name": "Aliaksandr",
+      "is_active": true,
+      "last_name": "Tsimoshyn",
+      "room": "5e15f94ecb738109e6c60d8f",
+      "department": "5cf29fb1e9911d68bc78aeed"
+    }
+  ],
+  "current_user": {
+    "id": "0c00aed6-7147-42b6-9ed2-b938c5537248",
+    "name": "Dzmitry",
+    "is_active": true,
+    "last_name": "Budayeu",
+    "room": "5e15f94ecb738109e6c60d8c",
+    "department": "5cf29fb1e9911d68bc78aeed",
+    "requests": [
+      {
+        "id": "dfhtef421f",
+        "type_id": "3432r23r2fewfwfwefe2",
+        "start_date": "2021-12-13T00:00:00.000Z",
+        "end_date": "2021-12-13T23:59:59.000Z",
+        "days": 1,
+        "created": "2021-12-12T07:37:43.000Z"
+      }
+    ]
+  }
+}

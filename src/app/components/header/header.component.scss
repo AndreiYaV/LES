@@ -1,0 +1,56 @@
+.header {
+  box-sizing: border-box;
+  height: 68px;
+  background-image: linear-gradient(rgb(34, 95, 191) 64px, rgb(23, 83, 179) 0px);
+  &__wrapper {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+
+    &-main {
+      font-size: 11px;
+      letter-spacing: 2px;
+      line-height: 18px;
+    }
+    color: white;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__menu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    a {
+      padding: 17px 25px 14px;
+      font-size: 13px;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.3)
+    }
+
+    .active {
+      color: white;
+      border-bottom: 4px solid #5495ff;
+     }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    .name {
+      font-size: 16px;
+      color: white;
+    }
+  }
+}
+
