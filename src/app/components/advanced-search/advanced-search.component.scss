@@ -1,0 +1,54 @@
+.advanced-form {
+  max-width: 350px;
+  text-align: left;
+  margin: 0 auto;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    label {
+      font-size: 11px;
+      margin-bottom: 9px;
+      color: #333d47;
+    }
+    input, select {
+      border: 1px solid #dae1e8;
+      height: 36px;
+      outline: none;
+    }
+  }
+  .location__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    label {
+      font-size: 11px;
+      margin-bottom: 9px;
+      color: #333d47;
+    }
+    input, select {
+      border: 1px solid #dae1e8;
+      height: 36px;
+      outline: none;
+    }
+    .form-group-room {
+      input {
+        width: 100px;
+        height: 32px;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+  button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 8px 12px;
+    cursor: pointer;
+    background: #5495ff;
+    color: #fff;
+  }
+}

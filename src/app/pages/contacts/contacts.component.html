@@ -1,37 +1,26 @@
 <div class="searchSm">
-  <div class="searchSm__wrapper">
-    <div class="searchSm__img">
-      <img *ngIf="!advancedSearch.isActive"
-        src="./assets/images/SearchEmployee_Left.png" alt="">
-      <div class="searchSm__title">
-        <span>Find Your Colleagues</span>
+    <div class="searchSm__wrapper">
+      <div class="searchSm__img">
+        <img *ngIf="!advancedSearch.isActive"
+             src="./assets/images/SearchEmployee_Left.png" alt="">
+        <div class="searchSm__title">
+          <span>Find Your Colleagues</span>
+        </div>
       </div>
-    </div>
-    <div class="searchSm__options">
-      <mat-tab-group dynamicHeight>
-        <mat-tab label="BASIC SEARCH">
+      <div class="searchSm__options">
+        <mat-tab-group dynamicHeight>
+          <mat-tab label="BASIC SEARCH">
             <div class="search-wrapper">
               <input type="text" class="small-search-input" placeholder="John Smith">
               <button class="small-search-btn">SEARCH</button>
-          </div>
-        </mat-tab>
-        <mat-tab label="ADVANCED SEARCH" #advancedSearch>
-          <div class="search-wrapper">
-            <form
-              class="advanced-form"
-              [formGroup]="AdvancedSearch">
-              <div class="form-group">
-                <label for="firstName">First Name: </label>
-                <input id="firstName" type="text" formControlName="firstName">
-              </div>
-              <div class="form-group">
-                <label for="lastName">Last Name: </label>
-                <input id="lastName" type="text" formControlName="lastName">
-              </div>
-            </form>
-          </div>
-        </mat-tab>
-      </mat-tab-group>
+            </div>
+          </mat-tab>
+          <mat-tab label="ADVANCED SEARCH" #advancedSearch>
+            <div class="search-wrapper">
+              <app-advanced-search></app-advanced-search>
+            </div>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
     </div>
-  </div>
 </div>

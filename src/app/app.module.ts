@@ -4,26 +4,30 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {HeaderModule} from "./components/header/header.module";
 import { ContactsComponent } from './pages/contacts/contacts.component';
 import { VacationsComponent } from './pages/vacations/vacations.component';
-import {MaterialModule} from "./material/material.module";
+import {MaterialModule} from "./externalModules/material.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HeaderComponent} from "./components/header/header.component";
+import { AdvancedSearchComponent } from './components/advanced-search/advanced-search.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
     ContactsComponent,
-    VacationsComponent
+    VacationsComponent,
+    AdvancedSearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HeaderModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

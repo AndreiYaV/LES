@@ -9,7 +9,7 @@
       <a [routerLink]="['vacations']" [routerLinkActive]="['active']">Leave Requests</a>
     </div>
    <div class="header__actions">
-     <div class="name">Andrei Ya</div>
+     <div class="name">{{currentUser?.name}} {{currentUser?.last_name}}</div>
    </div>
   </div>
 </mat-toolbar>
