@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {ContactService} from "../../services/user.service";
-import {IDepartment} from "../../services/interfaces/department.interface.";
-import {take} from "rxjs/operators";
-import {IBuilding} from "../../services/interfaces/building.interface";
+import {Contacts} from "../../services/interfaces/contacts.interface";
+import IContactsData = Contacts.IContactsData;
+
 
 @Component({
   selector: 'app-advanced-search',
@@ -11,13 +10,10 @@ import {IBuilding} from "../../services/interfaces/building.interface";
   styleUrls: ['./advanced-search.component.scss']
 })
 export class AdvancedSearchComponent implements OnInit {
+  @Input() options!: IContactsData;
   advancedSearch!: FormGroup;
-  departments: IDepartment[] = [];
-  buildings: IBuilding[] = [];
-  constructor(
-    private fb: FormBuilder,
-    private contactService: ContactService
-  ) {}
+
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
     this.advancedSearch = this.fb.group({
@@ -28,19 +24,6 @@ export class AdvancedSearchComponent implements OnInit {
       room: ['']
     })
 
-    this.contactService.getDepartments()
-      .pipe(
-        take(1)
-      ).subscribe(departments => {
-        this.departments = [{name: 'Any', id: ''}, ...departments]
-      })
-
-    this.contactService.getBuildings()
-      .pipe(
-        take(1)
-      ).subscribe(building => {
-      this.buildings = [{name: 'Any', id: ''}, ...building]
-    })
   }
 
   searchSubmit() {

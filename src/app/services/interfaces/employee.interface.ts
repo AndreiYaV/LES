@@ -1,4 +1,5 @@
-import {IRequest} from "./request.interface";
+import {Requests} from "./requests.interface";
+import IRequest = Requests.IRequest;
 
 export interface IEmployee {
   id: string;

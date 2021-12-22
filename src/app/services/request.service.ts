@@ -1,17 +1,19 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
-import {IRequestType} from "./interfaces/request-type.interface";
 import {Observable} from "rxjs";
+import {Requests} from "./interfaces/requests.interface";
+import IRequestType = Requests.IRequestType;
 
 @Injectable({
   providedIn: 'root'
 })
-export class VacationService {
+export class RequestService {
+  path = `${environment.apiUrl}:${environment.port}`;
 
   constructor(private http: HttpClient) { }
 
   public getRequestTypes(): Observable<IRequestType[]> {
-    return this.http.get<IRequestType[]>(`${environment.apiUrl}:${environment.port}/request_type`);
+    return this.http.get<IRequestType[]>(`${this.path}/request_type`);
   }
 }

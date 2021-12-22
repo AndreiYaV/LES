@@ -2,7 +2,7 @@
     <div class="searchSm__wrapper">
       <div class="searchSm__img">
         <img *ngIf="!advancedSearch.isActive"
-             src="./assets/images/SearchEmployee_Left.png" alt="">
+             src="./assets/images/SearchEmployee_Left.png" alt="left">
         <div class="searchSm__title">
           <span>Find Your Colleagues</span>
         </div>
@@ -17,7 +17,9 @@
           </mat-tab>
           <mat-tab label="ADVANCED SEARCH" #advancedSearch>
             <div class="search-wrapper">
-              <app-advanced-search></app-advanced-search>
+              <app-advanced-search
+                [options]="contactsData"
+              ></app-advanced-search>
             </div>
           </mat-tab>
         </mat-tab-group>
