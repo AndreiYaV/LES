@@ -1,0 +1,16 @@
+.select {
+  display: flex;
+  flex-direction: column;
+  label {
+    font-size: 11px;
+    margin-bottom: 9px;
+    color: #333d47;
+  }
+
+  input, select {
+    border: 1px solid #dae1e8;
+    height: 36px;
+    outline: none;
+  }
+
+}

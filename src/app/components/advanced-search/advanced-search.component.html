@@ -1,0 +1,34 @@
+  <form
+    class="advanced-form"
+    [formGroup]="advancedSearch"
+    (ngSubmit)="searchSubmit()"
+  >
+    <div class="form-group">
+      <label for="firstName">First Name: </label>
+      <input id="firstName" type="text" formControlName="firstName" placeholder="John">
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name: </label>
+      <input id="lastName" type="text" formControlName="lastName" placeholder="Smith">
+    </div>
+    <div class="form-group">
+      <app-search-select
+        [options]="options.departments"
+        [label]="'Department'"
+      ></app-search-select>
+    </div>
+    <div class="location__wrapper">
+      <div class="form-group-building">
+        <app-search-select
+          [options]="options.buildings"
+          [label]="'Building'"
+        ></app-search-select>
+      </div>
+      <div class="form-group-room">
+        <label for="room">Room</label>
+        <input id="room" type="text" formControlName="room" placeholder="303">
+      </div>
+    </div>
+    <button type="submit" [disabled]="advancedSearch.invalid">SEARCH</button>
+  </form>
+

@@ -1,29 +1,25 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {HeaderModule} from "./components/header/header.module";
 import { ContactsComponent } from './pages/contacts/contacts.component';
-import { VacationsComponent } from './pages/vacations/vacations.component';
-import {MaterialModule} from "./material/material.module";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { RequestsComponent } from './pages/requests/requests.component';
+import { HeaderComponent } from "./components/header/header.component";
+import { AdvancedSearchComponent } from './components/advanced-search/advanced-search.component';
+import { SharedModule } from "./externalModules/shared.module";
+import { SearchSelectComponent } from './components/form/search-select/search-select.component';
+import { RequestFormComponent } from './components/request-form/request-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
     ContactsComponent,
-    VacationsComponent
+    RequestsComponent,
+    AdvancedSearchComponent,
+    SearchSelectComponent,
+    RequestFormComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    HeaderModule,
-    MaterialModule,
-    FormsModule,
-    ReactiveFormsModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

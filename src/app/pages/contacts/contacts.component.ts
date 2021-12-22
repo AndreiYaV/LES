@@ -1,23 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {Contacts} from "../../services/interfaces/contacts.interface";
+import IContactsData = Contacts.IContactsData;
 
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
   styleUrls: ['./contacts.component.scss']
 })
-export class ContactsComponent implements OnInit {
-  AdvancedSearch!: FormGroup;
-  constructor(private fb: FormBuilder) { }
+export class ContactsComponent implements OnInit{
+  contactsData!: IContactsData
 
+  constructor(private route: ActivatedRoute) {}
   ngOnInit(): void {
-    this.AdvancedSearch = this.fb.group({
-      firstName: [''],
-      lastName: [''],
-      department: [''],
-      building: [''],
-      room: ['']
-    })
+    this.route.data.subscribe(res => this.contactsData = res.data)
   }
-
 }

@@ -1,0 +1,12 @@
+<form
+  class="request-form"
+  [formGroup]="requestForm"
+  (ngSubmit)="leaveRequest()">
+  <div class="form-group">
+   <app-search-select
+     [options]="requestTypes"
+     [label]="'Type'"
+   ></app-search-select>
+  </div>
+  <button type="submit" [disabled]="requestForm.invalid">SUBMIT</button>
+</form>
