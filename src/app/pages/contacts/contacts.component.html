@@ -1,6 +1,9 @@
 <div class="searchSm">
-    <div class="searchSm__wrapper">
-      <div class="searchSm__img">
+    <div [class.search-result-wrapper]="changeView"
+      class="searchSm__wrapper">
+      <div *ngIf="!changeView; else searchResult"
+        class="searchSm__img"
+      >
         <img *ngIf="!advancedSearch.isActive"
              src="./assets/images/SearchEmployee_Left.png" alt="left">
         <div class="searchSm__title">
@@ -11,8 +14,12 @@
         <mat-tab-group dynamicHeight>
           <mat-tab label="BASIC SEARCH">
             <div class="search-wrapper">
-              <input type="text" class="small-search-input" placeholder="John Smith">
-              <button class="small-search-btn">SEARCH</button>
+              <form
+                [formGroup]="basicForm"
+                (ngSubmit)="basicSearch()">
+                <input type="search" class="small-search-input" placeholder="John Smith" formControlName="search">
+                <button type="submit" [disabled]="basicForm.invalid" class="small-search-btn">SEARCH</button>
+              </form>
             </div>
           </mat-tab>
           <mat-tab label="ADVANCED SEARCH" #advancedSearch>
@@ -26,3 +33,9 @@
       </div>
     </div>
 </div>
+
+<ng-template #searchResult>
+  <div class="result__wrapper">
+    <h5>Result</h5>
+  </div>
+</ng-template>

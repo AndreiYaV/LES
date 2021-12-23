@@ -9,11 +9,12 @@ import IRequestType = Requests.IRequestType;
   styleUrls: ['./requests.component.scss']
 })
 export class RequestsComponent implements OnInit {
-  requestTypes!: IRequestType[];
+  requestTypes: IRequestType[] = [];
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.requestTypes = this.route.snapshot.data.data
+    console.log(this.requestTypes)
   }
 
 }
