@@ -5,7 +5,7 @@ import {Component, Input} from '@angular/core';
   templateUrl: './search-select.component.html',
   styleUrls: ['./search-select.component.scss']
 })
-export class SearchSelectComponent {
+export class SearchSelectComponent{
   @Input() options: any;
   @Input() label: string = '';
 }

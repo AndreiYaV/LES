@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {Contacts} from "../../services/interfaces/contacts.interface";
+import {Contacts} from "../../interfaces/contacts.interface";
 import IContactsData = Contacts.IContactsData;
 
 @Component({

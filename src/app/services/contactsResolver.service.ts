@@ -3,7 +3,7 @@ import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/rou
 import {catchError} from "rxjs/operators";
 import {forkJoin, Observable, of} from "rxjs";
 import {ContactsService} from "./contacts.service";
-import {Contacts} from "./interfaces/contacts.interface";
+import {Contacts} from "../interfaces/contacts.interface";
 import IContactsData = Contacts.IContactsData;
 
 @Injectable({
@@ -14,10 +14,8 @@ export class ContactsResolverService implements Resolve<IContactsData> {
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
     return forkJoin({
-      employees: this.contacts.getEmployees(),
       departments: this.contacts.getDepartments(),
       buildings: this.contacts.getBuildings(),
-      rooms: this.contacts.getRooms()
     }).pipe(
       catchError(error => {
         return of ('No data')

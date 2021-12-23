@@ -1,10 +1,10 @@
 <div class="select">
-  <label for="department">{{label}}</label>
-  <select id="department">
+  <label [for]="label | lowercase">{{label}}</label>
+  <select [id]="label | lowercase">
     <option value="any" disabled selected>Any</option>
     <option
       *ngFor="let value of options"
-      value="{{value.name}}"
+      value="{{value.id}}"
     >{{value.name}}</option>
   </select>
 </div>

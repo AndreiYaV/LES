@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {IEmployee} from "../../services/interfaces/employee.interface";
+import {IEmployee} from "../../interfaces/employee.interface";
 
 @Component({
   selector: 'app-header',
@@ -7,5 +7,5 @@ import {IEmployee} from "../../services/interfaces/employee.interface";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  @Input() currentUser: IEmployee | undefined;
+  @Input() currentUser!: IEmployee;
 }

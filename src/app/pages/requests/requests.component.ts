@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {Requests} from "../../services/interfaces/requests.interface";
+import {Requests} from "../../interfaces/requests.interface";
 import IRequestType = Requests.IRequestType;
 
 @Component({
@@ -13,7 +13,7 @@ export class RequestsComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.route.data.subscribe(res => this.requestTypes = res.data)
+    this.requestTypes = this.route.snapshot.data.data
   }
 
 }

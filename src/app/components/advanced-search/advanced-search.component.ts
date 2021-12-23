@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {Contacts} from "../../services/interfaces/contacts.interface";
+import {Contacts} from "../../interfaces/contacts.interface";
 import IContactsData = Contacts.IContactsData;
 
 
