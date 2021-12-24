@@ -8,8 +8,8 @@ import {DefaultUser} from "./classes/defaultUser";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
-  currentUser: IEmployee = new DefaultUser;
+export class AppComponent implements OnInit {
+  currentUser: IEmployee = new DefaultUser();
 
   constructor(private user: UserService) {}
 

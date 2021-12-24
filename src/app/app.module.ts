@@ -7,6 +7,7 @@ import { AdvancedSearchComponent } from './components/advanced-search/advanced-s
 import { SharedModule } from "./externalModules/shared.module";
 import { SearchSelectComponent } from './components/form/search-select/search-select.component';
 import { RequestFormComponent } from './components/request-form/request-form.component';
+import { DatepickerComponent } from './components/form/datepicker/datepicker.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RequestFormComponent } from './components/request-form/request-form.com
     RequestsComponent,
     AdvancedSearchComponent,
     SearchSelectComponent,
-    RequestFormComponent
+    RequestFormComponent,
+    DatepickerComponent
   ],
   imports: [
     SharedModule

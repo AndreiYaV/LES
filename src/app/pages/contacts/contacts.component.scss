@@ -1,5 +1,7 @@
 .searchSm {
-  height: calc(100vh - 68px);
+  height: calc(100vh - 90px);
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
   min-height: 760px;
 
@@ -45,6 +47,7 @@
     flex: 1;
     box-shadow: 0 2px 10px rgb(32 75 146 / 10%);
     border-radius: 0 0 10px 10px;
+    height: fit-content;
 
     ::ng-deep {
       .mat-tab-header {
@@ -74,6 +77,24 @@
         color: #ffffff;
       }
     }
+  }
+}
 
+.search-result-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: static;
+  transform: translate(0, 0);
+  margin-top: 15px;
+  height: calc(100vh - 90px);
+
+  .result__wrapper {
+    flex: 0 1 66%;
+    order: 1;
+    background: #fff;
+    box-shadow: 0 1px 3px rgb(32 75 146 / 15%);
+    border-radius: 5px;
+    margin: 0 15px;
   }
 }
