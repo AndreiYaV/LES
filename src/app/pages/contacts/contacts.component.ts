@@ -3,7 +3,6 @@ import {ActivatedRoute} from "@angular/router";
 import {Contacts} from "../../interfaces/contacts.interface";
 import IContactsData = Contacts.IContactsData;
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {SearchService} from "../../services/search.service";
 
 @Component({
   selector: 'app-contacts',

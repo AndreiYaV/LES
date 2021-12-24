@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {UserService} from "./services/user.service";
 import {IEmployee} from "./interfaces/employee.interface";
 import {DefaultUser} from "./classes/defaultUser";
