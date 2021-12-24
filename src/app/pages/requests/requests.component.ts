@@ -13,8 +13,7 @@ export class RequestsComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.requestTypes = this.route.snapshot.data.data
-    console.log(this.requestTypes)
+    this.requestTypes = this.route.snapshot.data.requests
   }
 
 }

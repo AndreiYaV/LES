@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {UserService} from "./services/user.service";
 import {IEmployee} from "./interfaces/employee.interface";
 import {DefaultUser} from "./classes/defaultUser";
@@ -8,8 +8,8 @@ import {DefaultUser} from "./classes/defaultUser";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
-  currentUser: IEmployee = new DefaultUser;
+export class AppComponent implements OnInit {
+  currentUser: IEmployee = new DefaultUser();
 
   constructor(private user: UserService) {}
 

@@ -7,8 +7,8 @@ import {RequestResolverService} from "./services/requestResolver.service";
 
 const routes: Routes = [
   {path: '', redirectTo: '/contacts', pathMatch: 'full'},
-  {path: 'contacts', component: ContactsComponent, resolve: { data: ContactsResolverService }},
-  {path: 'requests', component: RequestsComponent, resolve: { data: RequestResolverService }},
+  {path: 'contacts', component: ContactsComponent, resolve: { contacts: ContactsResolverService }},
+  {path: 'requests', component: RequestsComponent, resolve: { requests: RequestResolverService }},
 ];
 
 @NgModule({
