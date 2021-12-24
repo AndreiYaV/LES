@@ -21,8 +21,6 @@ export class RequestFormComponent implements OnInit {
     })
   }
 
-
-
   leaveRequest() {
 
   }

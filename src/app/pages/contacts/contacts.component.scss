@@ -97,4 +97,10 @@
     border-radius: 5px;
     margin: 0 15px;
   }
+
+  app-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }

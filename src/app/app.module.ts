@@ -8,6 +8,7 @@ import { SharedModule } from "./externalModules/shared.module";
 import { SearchSelectComponent } from './components/form/search-select/search-select.component';
 import { RequestFormComponent } from './components/request-form/request-form.component';
 import { DatepickerComponent } from './components/form/datepicker/datepicker.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DatepickerComponent } from './components/form/datepicker/datepicker.com
     AdvancedSearchComponent,
     SearchSelectComponent,
     RequestFormComponent,
-    DatepickerComponent
+    DatepickerComponent,
+    CardComponent
   ],
   imports: [
     SharedModule

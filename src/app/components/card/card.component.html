@@ -1,0 +1,10 @@
+<div class="card" *ngFor="let card of searchResults">
+  <div class="card__wrapper" [class.disable]="!card.is_active">
+    <div class="card__title">
+      <div class="card__title-firstname">{{card.name}}</div>
+      <div class="card__title-lastname">{{card.last_name}}</div>
+    </div>
+    <div class="card__department"></div>
+    <button>Log in as</button>
+  </div>
+</div>

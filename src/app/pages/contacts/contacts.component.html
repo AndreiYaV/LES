@@ -37,5 +37,10 @@
 <ng-template #searchResult>
   <div class="result__wrapper">
     <h5>Result</h5>
+    <div class="cards">
+      <app-card
+        [searchResults]="searchResults"
+      ></app-card>
+    </div>
   </div>
 </ng-template>
