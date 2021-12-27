@@ -1,0 +1,21 @@
+.card {
+  margin: 5px;
+  &__wrapper {
+    background: #fff;
+    box-shadow: 0 1px 3px rgb(32 75 146 / 15%);
+    border-radius: 5px;
+    padding: 24px 30px 0;
+    height: 290px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    button {
+      margin-bottom: 15px;
+    }
+  }
+  .disable {
+    background: #ececec;
+  }
+}

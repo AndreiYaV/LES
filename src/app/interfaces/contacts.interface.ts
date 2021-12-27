@@ -1,5 +1,3 @@
-import {IEmployee} from "./employee.interface";
-
 export namespace Contacts {
   export interface IDictionary {
     id: string;
@@ -21,7 +19,6 @@ export namespace Contacts {
   export interface IContactsData {
     buildings: IBuilding[];
     departments: IDepartment[];
-    employees: IEmployee[];
-    rooms: IRoom[];
+    rooms?: IRoom[];
   }
 }

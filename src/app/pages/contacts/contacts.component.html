@@ -36,6 +36,12 @@
 
 <ng-template #searchResult>
   <div class="result__wrapper">
-    <h5>Result</h5>
+    <h5 class="result__title">{{searchResults?.length ? 'Results' : 'No Results'}}</h5>
+    <div class="cards" *ngIf="searchResults?.length">
+      <app-card *ngFor="let card of searchResults"
+        [options]="card"
+        [department]="card.department | department: contactsData.departments"
+      ></app-card>
+    </div>
   </div>
 </ng-template>
