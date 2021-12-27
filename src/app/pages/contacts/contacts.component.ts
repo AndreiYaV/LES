@@ -5,7 +5,6 @@ import IContactsData = Contacts.IContactsData;
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {SearchService} from "../../services/search.service";
 import {IEmployee} from "../../interfaces/employee.interface";
-import {take} from "rxjs/operators";
 
 @Component({
   selector: 'app-contacts',
@@ -23,6 +22,7 @@ export class ContactsComponent implements OnInit {
     private fb: FormBuilder,
     private searchService: SearchService,
   ) {}
+
   ngOnInit(): void {
     this.contactsData = this.route.snapshot.data.contacts;
     this.basicForm = this.fb.group({
@@ -32,8 +32,6 @@ export class ContactsComponent implements OnInit {
 
   basicSearch() {
     this.changeView = true;
-    this.searchService.basicSearch(this.basicForm.value.search).pipe(
-      take(1)
-    ).subscribe(res => this.searchResults = res)
+    this.searchService.basicSearch(this.basicForm.value.search).subscribe(res => this.searchResults = res)
   }
 }

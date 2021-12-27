@@ -7,5 +7,6 @@ import {IEmployee} from "../../interfaces/employee.interface";
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
-  @Input() searchResults!: IEmployee[];
+  @Input() options!: IEmployee;
+  @Input() department: any = '';
 }

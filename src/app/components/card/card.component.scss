@@ -1,5 +1,4 @@
 .card {
-  width: 33%;
   margin: 5px;
   &__wrapper {
     background: #fff;
@@ -12,8 +11,11 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    button {
+      margin-bottom: 15px;
+    }
   }
   .disable {
-    background: #333333;
+    background: #ececec;
   }
 }
