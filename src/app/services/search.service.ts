@@ -12,6 +12,6 @@ export class SearchService {
   ) {}
 
   basicSearch(req: string) {
-    return this.http.get<IEmployee[]>(`${PATH}/employee?q=${req}`)
+    return this.http.get<IEmployee[]>(`${PATH}/employee?q=${req}&_sort=last_name`)
   }
 }

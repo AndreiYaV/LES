@@ -37,10 +37,16 @@
 <ng-template #searchResult>
   <div class="result__wrapper">
     <h5 class="result__title">{{searchResults?.length ? 'Results' : 'No Results'}}</h5>
+    <mat-paginator [length]="searchResults?.length"
+                   [pageSize]="3"
+                   [pageSizeOptions]="[3, 9, 15, 30]"
+                   aria-label="Select page"
+                   (page)="onPageChange($event)">
+    </mat-paginator>
     <div class="cards" *ngIf="searchResults?.length">
-      <app-card *ngFor="let card of searchResults"
-        [options]="card"
-        [department]="card.department | department: contactsData.departments"
+      <app-card *ngFor="let card of sliceResult"
+                [options]="card"
+                [department]="card.department | department: contactsData.departments"
       ></app-card>
     </div>
   </div>

@@ -3,7 +3,6 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Contacts} from "../../interfaces/contacts.interface";
 import IContactsData = Contacts.IContactsData;
 
-
 @Component({
   selector: 'app-advanced-search',
   templateUrl: './advanced-search.component.html',
@@ -17,8 +16,8 @@ export class AdvancedSearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.advancedSearch = this.fb.group({
-      firstName: ['', [Validators.required]],
-      lastName: [''],
+      firstName: ['', [Validators.minLength(3)]],
+      lastName: ['', [Validators.minLength(3)]],
       department: [''],
       building: [''],
       room: ['']
@@ -27,6 +26,11 @@ export class AdvancedSearchComponent implements OnInit {
   }
 
   searchSubmit() {
-
+    if (!this.advancedSearch.value.firstName
+      && !this.advancedSearch.value.lastName
+      && !this.advancedSearch.value.room) {
+      return
+    }
+    console.log(this.advancedSearch.value)
   }
 }

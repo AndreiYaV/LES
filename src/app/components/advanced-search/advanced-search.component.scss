@@ -58,4 +58,8 @@
     background: #5495ff;
     color: #fff;
   }
+  button[disabled] {
+    background-color: #a9d5ff;
+    cursor: not-allowed;
+  }
 }
