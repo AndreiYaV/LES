@@ -50,6 +50,7 @@
       }
     }
   }
+
   button {
     margin-top: 15px;
     width: 100%;
@@ -57,5 +58,11 @@
     cursor: pointer;
     background: #5495ff;
     color: #fff;
+
+    &[disabled] {
+      background-color: #a9d5ff;
+      cursor: not-allowed;
+    }
   }
+
 }

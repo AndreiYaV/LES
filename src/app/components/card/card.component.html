@@ -1,13 +1,13 @@
 <div class="card">
-  <div class="card__wrapper" [class.disable]="!options.is_active">
+  <div class="card__wrapper" [class.disable]="!data.is_active">
     <div class="card__title">
-      <div class="card__title-firstname">{{options.name}}</div>
-      <div class="card__title-lastname">{{options.last_name}}</div>
+      <div class="card__title-firstname">{{data.name}}</div>
+      <div class="card__title-lastname">{{data.last_name}}</div>
     </div>
-    <div class="card__department">{{department}}</div>
+    <div class="card__department">{{departmentName}}</div>
     <div class="card__btn" >
       <button
-        *ngIf="options.is_active"
+        *ngIf="data.is_active"
       >Log in as</button>
     </div>
   </div>

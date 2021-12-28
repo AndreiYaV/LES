@@ -25,7 +25,7 @@
           <mat-tab label="ADVANCED SEARCH" #advancedSearch>
             <div class="search-wrapper">
               <app-advanced-search
-                [options]="contactsData"
+                [data]="contactsData"
               ></app-advanced-search>
             </div>
           </mat-tab>
@@ -36,12 +36,21 @@
 
 <ng-template #searchResult>
   <div class="result__wrapper">
-    <h5 class="result__title">{{searchResults?.length ? 'Results' : 'No Results'}}</h5>
-    <div class="cards" *ngIf="searchResults?.length">
-      <app-card *ngFor="let card of searchResults"
-        [options]="card"
-        [department]="card.department | department: contactsData.departments"
-      ></app-card>
-    </div>
+    <h5 class="result__title">{{searchResultsCount ? 'Results' : 'No Results'}}</h5>
+    <ng-container *ngIf="searchResultsCount">
+      <mat-paginator [length]="searchResultsCount"
+                     [pageSize]="PAGINATION_OPTIONS.PAGE_SIZE"
+                     [pageSizeOptions]="PAGINATION_OPTIONS.PAGE_SIZE_OPTIONS"
+                     aria-label="Select page"
+                     (page)="onPageChange($event)">
+      </mat-paginator>
+      <div class="cards">
+        <app-card
+          class="card"
+          *ngFor="let card of sliceResult"
+          [data]="card"
+        ></app-card>
+      </div>
+    </ng-container>
   </div>
 </ng-template>

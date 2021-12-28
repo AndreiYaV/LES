@@ -9,7 +9,6 @@ import { SearchSelectComponent } from './components/form/search-select/search-se
 import { RequestFormComponent } from './components/request-form/request-form.component';
 import { DatepickerComponent } from './components/form/datepicker/datepicker.component';
 import { CardComponent } from './components/card/card.component';
-import { DepartmentPipe } from './pipes/department.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,6 @@ import { DepartmentPipe } from './pipes/department.pipe';
     SearchSelectComponent,
     RequestFormComponent,
     DatepickerComponent,
-    DepartmentPipe,
     CardComponent
   ],
   imports: [
