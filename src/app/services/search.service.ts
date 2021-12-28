@@ -7,11 +7,17 @@ import {IEmployee} from "../interfaces/employee.interface";
   providedIn: 'root'
 })
 export class SearchService {
+  queryParamsSort = '_sort=last_name';
+  paginationStart = '&_start=';
+  paginationStop = '&_end=';
+
   constructor(
     private http: HttpClient,
   ) {}
 
-  basicSearch(req: string) {
-    return this.http.get<IEmployee[]>(`${PATH}/employee?q=${req}&_sort=last_name`)
+  basicSearch(req: string, start: number, stop: number) {
+    return this.http.get<IEmployee[]>
+    (`${PATH}/employee?q=${req}&${this.queryParamsSort}${this.paginationStart}${start}${this.paginationStop}${stop}`,
+      {observe: 'response'})
   }
 }

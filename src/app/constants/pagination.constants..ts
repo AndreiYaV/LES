@@ -1,0 +1,5 @@
+export const PAGINATION_OPTIONS = {
+  PAGE_SIZE: 3,
+  PAGE_SIZE_OPTIONS: [3, 9, 15, 30]
+}
+

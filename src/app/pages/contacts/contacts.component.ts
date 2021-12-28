@@ -6,6 +6,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {SearchService} from "../../services/search.service";
 import {IEmployee} from "../../interfaces/employee.interface";
 import {PageEvent} from "@angular/material/paginator";
+import {PAGINATION_OPTIONS} from "../../constants/pagination.constants.";
 
 @Component({
   selector: 'app-contacts',
@@ -14,10 +15,11 @@ import {PageEvent} from "@angular/material/paginator";
 })
 export class ContactsComponent implements OnInit {
   contactsData!: IContactsData;
-  searchResults!: IEmployee[];
+  searchResultsCount!: number | null;
   basicForm!: FormGroup;
   changeView = false;
-  sliceResult!: IEmployee[];
+  sliceResult: IEmployee[] | null = [];
+  readonly PAGINATION_OPTIONS = PAGINATION_OPTIONS;
 
   constructor(
     private route: ActivatedRoute,
@@ -37,18 +39,20 @@ export class ContactsComponent implements OnInit {
       return;
     }
     this.changeView = true;
-    this.searchService.basicSearch(this.basicForm.value.search).subscribe(res => {
-      this.searchResults = res
-      this.sliceResult = this.searchResults.slice(0,3);
+    const value = this.basicForm.value.search
+    this.searchService.basicSearch(value, 0, PAGINATION_OPTIONS.PAGE_SIZE).subscribe(response => {
+      this.searchResultsCount = Number(response.headers.get('X-Total-Count'));
+      this.sliceResult = response.body
     })
   }
 
   onPageChange(event: PageEvent) {
     const startIdx = event.pageIndex * event.pageSize;
     let endIdx = startIdx + event.pageSize;
-    if (endIdx > this.searchResults.length) {
-      endIdx = this.searchResults.length;
+    if (this.searchResultsCount && endIdx > this.searchResultsCount) {
+      endIdx = this.searchResultsCount;
     }
-    this.sliceResult = this.searchResults.slice(startIdx, endIdx)
+    this.searchService.basicSearch(this.basicForm.value.search, startIdx, endIdx).subscribe(response => this.sliceResult = response.body)
+
   }
 }

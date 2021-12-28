@@ -9,7 +9,7 @@ import IContactsData = Contacts.IContactsData;
   styleUrls: ['./advanced-search.component.scss']
 })
 export class AdvancedSearchComponent implements OnInit {
-  @Input() options!: IContactsData;
+  @Input() data!: IContactsData;
   advancedSearch!: FormGroup;
 
   constructor(private fb: FormBuilder) {}
@@ -26,9 +26,8 @@ export class AdvancedSearchComponent implements OnInit {
   }
 
   searchSubmit() {
-    if (!this.advancedSearch.value.firstName
-      && !this.advancedSearch.value.lastName
-      && !this.advancedSearch.value.room) {
+    const {firstName, lastName, room} = this.advancedSearch.value
+    if (!firstName && !lastName && !room) {
       return
     }
     console.log(this.advancedSearch.value)

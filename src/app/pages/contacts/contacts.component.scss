@@ -112,8 +112,10 @@
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
+
+    .card {
+      flex: 0 1 32%;
+    }
   }
-  app-card {
-    flex: 0 1 32%;
-  }
+
 }
