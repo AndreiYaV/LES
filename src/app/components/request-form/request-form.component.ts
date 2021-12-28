@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Requests} from "../../interfaces/requests.interface";
 import IRequestType = Requests.IRequestType;
 
@@ -17,11 +17,11 @@ export class RequestFormComponent implements OnInit {
   ngOnInit(): void {
     this.requestForm = this.fb.group({
       type: [''],
-
+      message: ['', [Validators.required, Validators.minLength(5)]],
     })
   }
 
   leaveRequest() {
-
+    console.log(this.requestForm.value)
   }
 }

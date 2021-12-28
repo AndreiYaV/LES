@@ -9,6 +9,7 @@ import { SearchSelectComponent } from './components/form/search-select/search-se
 import { RequestFormComponent } from './components/request-form/request-form.component';
 import { DatepickerComponent } from './components/form/datepicker/datepicker.component';
 import { CardComponent } from './components/card/card.component';
+import { RequestComponent } from './components/request/request.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CardComponent } from './components/card/card.component';
     SearchSelectComponent,
     RequestFormComponent,
     DatepickerComponent,
-    CardComponent
+    CardComponent,
+    RequestComponent
   ],
   imports: [
     SharedModule
