@@ -1,21 +1,22 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {IEmployee} from "../../interfaces/employee.interface";
 import {ContactsService} from "../../services/contacts.service";
+import {DictionaryService} from "../../services/dictionary.service";
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
-export class CardComponent implements OnInit{
+export class CardComponent {
   @Input() data!: IEmployee;
-  departmentName: string = '';
 
-  constructor(private contactsService: ContactsService) {}
+  constructor(
+    private contactsService: ContactsService,
+    private dictionaryService: DictionaryService
+  ) {}
 
-  ngOnInit(): void {
-    this.contactsService.getDepartments().subscribe(res => {
-      this.departmentName = res.find(department => department.id === this.data.department)!.name
-    });
+  get departmentName() {
+    return this.dictionaryService.departments.find(department => department.id === this.data.department)?.name
   }
 }
