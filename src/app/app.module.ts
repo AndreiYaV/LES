@@ -7,9 +7,9 @@ import { AdvancedSearchComponent } from './components/advanced-search/advanced-s
 import { SharedModule } from "./externalModules/shared.module";
 import { SearchSelectComponent } from './components/form/search-select/search-select.component';
 import { RequestFormComponent } from './components/request-form/request-form.component';
-import { DatepickerComponent } from './components/form/datepicker/datepicker.component';
 import { CardComponent } from './components/card/card.component';
 import { RequestComponent } from './components/request/request.component';
+import { RequestCardComponent } from "./components/request-card/request-card.component";
 
 @NgModule({
   declarations: [
@@ -20,12 +20,12 @@ import { RequestComponent } from './components/request/request.component';
     AdvancedSearchComponent,
     SearchSelectComponent,
     RequestFormComponent,
-    DatepickerComponent,
     CardComponent,
-    RequestComponent
+    RequestComponent,
+    RequestCardComponent
   ],
   imports: [
-    SharedModule
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

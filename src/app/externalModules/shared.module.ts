@@ -5,11 +5,11 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MaterialModule} from "./material.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
 import {MatInputModule} from "@angular/material/input";
-import {MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [],
@@ -21,6 +21,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatPaginatorModule,
     MatFormFieldModule,
     MatDatepickerModule,
     MatNativeDateModule,
@@ -35,6 +36,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatPaginatorModule,
     MatFormFieldModule,
     MatDatepickerModule,
     MatNativeDateModule,

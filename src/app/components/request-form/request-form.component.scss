@@ -1,0 +1,21 @@
+.search_select {
+  margin-top: 15px;
+}
+
+.form__btn {
+  background: #5495ff;
+  color: #fff;
+  text-transform: uppercase;
+  border: 1px solid #4c88e8;
+  border-radius: 3px;
+
+  &[disabled] {
+    background: #aecbff;
+  }
+}
+
+.date_picker {
+  ::ng-deep {
+    margin-top: 15px;
+  }
+}

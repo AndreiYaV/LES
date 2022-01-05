@@ -13,6 +13,7 @@
     </div>
     <div class="form-group">
       <app-search-select
+        [formControl]="department"
         [options]="data.departments"
         label="Department"
       ></app-search-select>
@@ -20,6 +21,7 @@
     <div class="location__wrapper">
       <div class="form-group-building">
         <app-search-select
+          [formControl]="building"
           [options]="data.buildings"
           label="Building"
         ></app-search-select>
