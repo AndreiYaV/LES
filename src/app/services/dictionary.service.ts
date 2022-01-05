@@ -1,4 +1,4 @@
-import {Injectable, OnInit} from "@angular/core";
+import {Injectable} from "@angular/core";
 import {Contacts} from "../interfaces/contacts.interface";
 import IDepartment = Contacts.IDepartment;
 import {ContactsService} from "./contacts.service";

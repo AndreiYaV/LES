@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {IEmployee} from "../../interfaces/employee.interface";
 import {ContactsService} from "../../services/contacts.service";
 import {DictionaryService} from "../../services/dictionary.service";
