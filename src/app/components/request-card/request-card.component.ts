@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {IRequestData} from "../request-form/request-form.component";
 
 @Component({
@@ -6,11 +6,6 @@ import {IRequestData} from "../request-form/request-form.component";
   templateUrl: './request-card.component.html',
   styleUrls: ['./request-card.component.scss']
 })
-export class RequestCardComponent implements OnInit {
-  @Input() requestData!: IRequestData
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class RequestCardComponent{
+  @Input() cardData!: IRequestData
 }
