@@ -1,6 +1,5 @@
 import {Component, Input} from '@angular/core';
 import {IEmployee} from "../../interfaces/employee.interface";
-import {ContactsService} from "../../services/contacts.service";
 import {DictionaryService} from "../../services/dictionary.service";
 
 @Component({
@@ -12,11 +11,11 @@ export class CardComponent {
   @Input() data!: IEmployee;
 
   constructor(
-    private contactsService: ContactsService,
     private dictionaryService: DictionaryService
   ) {}
 
   get departmentName() {
-    return this.dictionaryService.departments.find(department => department.id === this.data.department)?.name
+    return this.dictionaryService.getData('departments')
+      .find(department => department.id === this.data.department)?.name
   }
 }

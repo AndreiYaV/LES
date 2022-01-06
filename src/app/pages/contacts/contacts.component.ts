@@ -7,6 +7,7 @@ import {SearchService} from "../../services/search.service";
 import {IEmployee} from "../../interfaces/employee.interface";
 import {PageEvent} from "@angular/material/paginator";
 import {PAGINATION_OPTIONS} from "../../constants/pagination.constants.";
+import {DictionaryService} from "../../services/dictionary.service";
 
 @Component({
   selector: 'app-contacts',
@@ -25,10 +26,12 @@ export class ContactsComponent implements OnInit {
     private route: ActivatedRoute,
     private fb: FormBuilder,
     private searchService: SearchService,
+    private dictionaryService: DictionaryService
   ) {}
 
   ngOnInit(): void {
     this.contactsData = this.route.snapshot.data.contacts;
+    this.dictionaryService.setData('departments', this.route.snapshot.data.contacts.departments);
     this.basicForm = this.fb.group({
       search: ['', [Validators.required, Validators.minLength(3)]]
     })

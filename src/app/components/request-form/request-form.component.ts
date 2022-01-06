@@ -22,18 +22,18 @@ export class RequestFormComponent implements OnInit {
   @Output() requestData:  EventEmitter<IRequestData> = new EventEmitter<IRequestData>()
 
   requestForm!: FormGroup;
-  type: FormControl = new FormControl('', [Validators.required])
-  range: FormGroup = new FormGroup({
-    start: new FormControl('', [Validators.required]),
-    end: new FormControl('', [Validators.required]),
-  })
+  type!: FormControl;
+  range!: FormGroup;
 
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
     this.requestForm = this.fb.group({
-      type: this.type,
-      range: this.range,
+      type: this.type = new FormControl('', [Validators.required]),
+      range: this.range = new FormGroup({
+        start: new FormControl('', [Validators.required]),
+        end: new FormControl('', [Validators.required]),
+      }),
       message: ['', [Validators.required, Validators.minLength(5)]],
     })
   }
