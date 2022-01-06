@@ -39,7 +39,7 @@ export class RequestFormComponent implements OnInit {
   }
 
   leaveRequest() {
-    console.log(this.requestForm.value)
+    // console.log(this.requestForm.value)
     this.requestData.emit(this.requestForm.value)
   }
 

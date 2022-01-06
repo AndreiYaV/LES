@@ -1,10 +1,8 @@
 <div class="request">
   <div class="request__wrapper">
-    <div class="request__type">
-      <div class="request__card">
         <app-request-card
+          *ngFor="let card of requestData"
+          [cardData]="card"
         ></app-request-card>
-      </div>
-    </div>
   </div>
 </div>

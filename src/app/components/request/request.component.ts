@@ -8,12 +8,13 @@ import {IRequestData} from "../request-form/request-form.component";
   styleUrls: ['./request.component.scss']
 })
 export class RequestComponent implements OnInit {
-  @Input() data!: Observable<any>
+  @Input() data!: Observable<IRequestData>
+  requestData: IRequestData[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.data)
+    this.data.subscribe(req => this.requestData.push(req))
   }
 
 }
