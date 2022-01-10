@@ -8,6 +8,8 @@ import {IEmployee} from "../../interfaces/employee.interface";
 import {PageEvent} from "@angular/material/paginator";
 import {PAGINATION_OPTIONS} from "../../constants/pagination.constants.";
 import {DictionaryService} from "../../services/dictionary.service";
+import {UserService} from "../../services/user.service";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-contacts',
@@ -20,16 +22,19 @@ export class ContactsComponent implements OnInit {
   basicForm!: FormGroup;
   changeView = false;
   sliceResult: IEmployee[] | null = [];
+  currentUser$!: Observable<IEmployee>;
   readonly PAGINATION_OPTIONS = PAGINATION_OPTIONS;
 
   constructor(
     private route: ActivatedRoute,
     private fb: FormBuilder,
     private searchService: SearchService,
-    private dictionaryService: DictionaryService
+    private dictionaryService: DictionaryService,
+    private userService: UserService,
   ) {}
 
   ngOnInit(): void {
+    this.currentUser$ = this.userService.getCurrentUser();
     this.contactsData = this.route.snapshot.data.contacts;
     this.dictionaryService.setData('departments', this.route.snapshot.data.contacts.departments);
     this.basicForm = this.fb.group({
@@ -57,5 +62,11 @@ export class ContactsComponent implements OnInit {
     }
     this.searchService.basicSearch(this.basicForm.value.search, startIdx, endIdx).subscribe(response => this.sliceResult = response.body)
 
+  }
+
+  changeUser(event: IEmployee) {
+    this.userService.changeUser(event).subscribe(() => {
+      this.currentUser$ = this.userService.getCurrentUser()
+    })
   }
 }

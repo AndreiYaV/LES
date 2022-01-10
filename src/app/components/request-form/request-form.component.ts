@@ -39,8 +39,8 @@ export class RequestFormComponent implements OnInit {
   }
 
   leaveRequest() {
-    // console.log(this.requestForm.value)
-    this.requestData.emit(this.requestForm.value)
+    const uuid = (Math.round(Date.now())).toString(20);
+    this.requestData.emit({id: uuid, ...this.requestForm.value})
   }
 
 }

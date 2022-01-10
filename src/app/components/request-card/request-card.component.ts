@@ -8,4 +8,5 @@ import {IRequestData} from "../request-form/request-form.component";
 })
 export class RequestCardComponent{
   @Input() cardData!: IRequestData
+  currentDate = new Date();
 }

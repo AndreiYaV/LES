@@ -1,7 +1,17 @@
 <div class="request__card">
-  <p>{{cardData.type}}</p>
-  <p>{{cardData.message}}</p>
-  <p>{{cardData.range.start}}</p>
-  <p>{{cardData.range.end}}</p>
+  <div class="request__card-wrapper">
+    <div class="request__card-data">
+      <div class="request__card-title">
+        <div class="type">{{cardData.type}}: </div>
+        <div class="start">{{cardData.range.start | date : ' dd LLL yyyy '}} - </div>
+        <div class="end">{{cardData.range.end | date : ' dd LLL yyyy '}}</div>
+        <div class="days"> ({{cardData.range.end | diffDate: cardData.range.start}} days)</div>
+      </div>
+      <p>created: {{currentDate | date : ' dd LLL yyyy '}}</p>
+    </div>
+    <div class="request__card-action">
+      <app-edit-menu></app-edit-menu>
+    </div>
+  </div>
 </div>
 
