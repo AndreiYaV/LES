@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {Requests} from "../../interfaces/requests.interface";
-import IRequestType = Requests.IRequestType;
-import {IRequestData} from "../../components/request-form/request-form.component";
 import {Observable, Subject} from "rxjs";
+import IRequestType = Requests.IRequestType;
 
 @Component({
   selector: 'app-requests',
   templateUrl: './requests.component.html',
-  styleUrls: ['./requests.component.scss']
+  styleUrls: ['./requests.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RequestsComponent implements OnInit {
   requestTypes: IRequestType[] = [];

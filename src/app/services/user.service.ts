@@ -12,4 +12,8 @@ export class UserService {
   public getCurrentUser() {
     return this.http.get<IEmployee>(`${PATH}/current_user`)
   }
+
+  public changeUser(data: any) {
+    return this.http.patch<IEmployee>(`${PATH}/current_user`, data)
+  }
 }

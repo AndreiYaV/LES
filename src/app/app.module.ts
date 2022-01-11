@@ -11,6 +11,8 @@ import { CardComponent } from './components/card/card.component';
 import { RequestComponent } from './components/request/request.component';
 import { RequestCardComponent } from "./components/request-card/request-card.component";
 import { DatepickerComponent } from './components/form/datepicker/datepicker.component';
+import { DiffDatePipe } from './pipes/diff-date.pipe';
+import { EditMenuComponent } from './components/edit-menu/edit-menu.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { DatepickerComponent } from './components/form/datepicker/datepicker.com
     RequestComponent,
     RequestCardComponent,
     DatepickerComponent,
+    DiffDatePipe,
+    EditMenuComponent,
   ],
   imports: [
     SharedModule,

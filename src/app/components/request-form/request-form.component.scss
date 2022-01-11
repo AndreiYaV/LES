@@ -2,6 +2,11 @@
   margin-top: 15px;
 }
 
+.date_wrapper {
+  display: flex;
+  margin-top: 10px;
+}
+
 .form__btn {
   background: #5495ff;
   color: #fff;
@@ -14,8 +19,22 @@
   }
 }
 
+mat-label, label {
+  font-size: 11px;
+  margin: 9px 0;
+  color: #333d47;
+};
+
 .date_picker {
   ::ng-deep {
-    margin-top: 15px;
+    margin-top: 5px;
+
   }
+}
+
+.days {
+  height: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
