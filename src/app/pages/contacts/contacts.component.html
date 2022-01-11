@@ -49,7 +49,7 @@
           class="card"
           *ngFor="let card of sliceResult"
           [data]="card"
-          [currentUser$]="currentUser$"
+          [currentUser]="currentUser"
           (changeCurrentUser)="changeUser($event)"
         ></app-card>
       </div>

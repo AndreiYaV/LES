@@ -1,26 +1,29 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from '@angular/core';
 import {IEmployee} from "../../interfaces/employee.interface";
 import {DictionaryService} from "../../services/dictionary.service";
-import {Observable} from "rxjs";
+import {Contacts} from "../../interfaces/contacts.interface";
+import IDepartment = Contacts.IDepartment;
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  styleUrls: ['./card.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardComponent {
-  @Input() data!: IEmployee;
-  @Input() currentUser$!: Observable<IEmployee>;
+  @Input() set data(employee: IEmployee) {
+    this._data = employee;
+    this.department = this.dictionaryService.getData('departments')
+      .find(department => department.id === employee.department)?.name
+  }
+  @Input() currentUser!: IEmployee;
   @Output() changeCurrentUser: EventEmitter<IEmployee> = new EventEmitter<IEmployee>();
+  _data!: IEmployee;
+  department!: IDepartment;
 
   constructor(
     private dictionaryService: DictionaryService,
   ) {}
-
-  get departmentName() {
-    return this.dictionaryService.getData('departments')
-      .find(department => department.id === this.data.department)?.name
-  }
 
   changeUser(data: IEmployee) {
     this.changeCurrentUser.emit(data)

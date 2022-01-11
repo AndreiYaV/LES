@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {Contacts} from "../../interfaces/contacts.interface";
 import IContactsData = Contacts.IContactsData;
@@ -7,6 +7,7 @@ import IContactsData = Contacts.IContactsData;
   selector: 'app-advanced-search',
   templateUrl: './advanced-search.component.html',
   styleUrls: ['./advanced-search.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AdvancedSearchComponent implements OnInit {
   @Input() data!: IContactsData;

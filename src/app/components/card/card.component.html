@@ -1,16 +1,16 @@
 <div class="card">
-  <div class="card__wrapper" [class.disable]="!data.is_active">
+  <div class="card__wrapper" [class.disable]="!_data.is_active">
     <div class="card__title">
-      <div class="card__title-firstname">{{data.name}}</div>
-      <div class="card__title-lastname">{{data.last_name}}</div>
+      <div class="card__title-firstname">{{_data.name}}</div>
+      <div class="card__title-lastname">{{_data.last_name}}</div>
     </div>
-    <div class="card__department">{{departmentName}}</div>
+    <div class="card__department">{{department}}</div>
     <div class="card__btn" >
       <button
-        *ngIf="data.is_active"
-        (click)="changeUser(data)"
-        [disabled]="(currentUser$ | async)?.id === data.id"
-      >{{(currentUser$ | async)?.id === data.id ? 'Active' : 'Log in as'}}</button>
+        *ngIf="_data.is_active"
+        (click)="changeUser(_data)"
+        [disabled]="currentUser.id === _data.id"
+      >{{currentUser.id === _data.id ? 'Active' : 'Log in as'}}</button>
     </div>
   </div>
 </div>

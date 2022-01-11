@@ -27,7 +27,8 @@
     <div>
       <label>Days</label>
       <div *ngIf="requestForm.get('range')?.get('end')?.value"
-        class="days">{{requestForm.get('range')?.get('end')?.value | diffDate: requestForm.get('range')?.get('start')?.value}}</div>
+        class="days"
+      >{{requestForm.get('range.end')?.value | diffDate: requestForm.get('range.start')?.value}}</div>
     </div>
   </div>
 
