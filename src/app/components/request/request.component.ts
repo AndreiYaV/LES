@@ -1,7 +1,6 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import {Observable} from "rxjs";
-import {IRequestData} from "../request-form/request-form.component";
-import {RequestService} from "../../services/request.service";
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
+import {Requests} from "../../interfaces/requests.interface";
+import IRequest = Requests.IRequest;
 
 @Component({
   selector: 'app-request',
@@ -9,16 +8,6 @@ import {RequestService} from "../../services/request.service";
   styleUrls: ['./request.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class RequestComponent implements OnInit {
-  @Input() data!: Observable<IRequestData>
-  requestData: IRequestData[] = [];
-
-  constructor(private requestService: RequestService) { }
-
-  ngOnInit(): void {
-    this.data.subscribe(req => {
-      this.requestService.createRequest(req as any)
-      this.requestData.push(req)
-    })
-  }
+export class RequestComponent {
+  @Input() requests!: IRequest[]
 }

@@ -4,7 +4,7 @@
   (ngSubmit)="leaveRequest()">
   <div class="form-group search_select">
    <app-search-select
-     [formControl]="type"
+     [formControl]="type_id"
      [options]="requestTypes"
      label="Type"
    ></app-search-select>
@@ -33,7 +33,7 @@
   </div>
 
   <div class="form-group">
-    <textarea name="message" formControlName="message"></textarea>
+    <textarea name="message" formControlName="comment"></textarea>
   </div>
   <button type="submit" class="form__btn" [disabled]="requestForm.invalid">SUBMIT</button>
 </form>

@@ -2,15 +2,7 @@ import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output}
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {Requests} from "../../interfaces/requests.interface";
 import IRequestType = Requests.IRequestType;
-
-export interface IRequestData {
-  message: string;
-  range: {
-    end: Date;
-    start: Date;
-  }
-  type: string;
-}
+import IRequest = Requests.IRequest;
 
 @Component({
   selector: 'app-request-form',
@@ -20,29 +12,47 @@ export interface IRequestData {
 })
 export class RequestFormComponent implements OnInit {
   @Input() requestTypes!: IRequestType[];
-  @Output() requestData:  EventEmitter<IRequestData> = new EventEmitter<IRequestData>()
+  @Output() requestData:  EventEmitter<IRequest> = new EventEmitter<IRequest>()
 
   requestForm!: FormGroup;
-  type!: FormControl;
+  type_id!: FormControl;
   range!: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+  ) {}
 
   ngOnInit(): void {
     this.requestForm = this.fb.group({
-      type: this.type = new FormControl('', [Validators.required]),
+      type_id: this.type_id = new FormControl('', [Validators.required]),
       range: this.range = new FormGroup({
         start: new FormControl('', [Validators.required]),
         end: new FormControl('', [Validators.required]),
       }),
-      message: ['', [Validators.required, Validators.minLength(5)]],
+      comment: ['', [Validators.required, Validators.minLength(5)]],
     })
   }
 
-  leaveRequest() {
-    console.log(this.requestForm)
-    const uuid = (Math.round(Date.now())).toString(20);
-    this.requestData.emit({id: uuid, ...this.requestForm.value})
+  daysCounter(end: Date, start: Date): number {
+    return Math.floor((end.getTime() - start.getTime()) / 1000 / 60 / 60 / 24);
   }
 
+  leaveRequest() {
+    if(!this.requestForm.valid) {
+      return
+    }
+    const uuid = (Math.round(Date.now())).toString(20);
+    const req = {
+          id: uuid,
+          type_id: this.requestForm.controls.type_id.value,
+          created: new Date(),
+          start_date: this.requestForm.controls.range.value.start,
+          end_date: this.requestForm.controls.range.value.end,
+          comment: this.requestForm.controls.comment.value,
+          days: this.daysCounter(
+            this.requestForm.controls.range.value.end,
+            this.requestForm.controls.range.value.start)
+        }
+    this.requestData.emit(req)
+  }
 }

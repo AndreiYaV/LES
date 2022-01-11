@@ -1,5 +1,6 @@
 import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
-import {IRequestData} from "../request-form/request-form.component";
+import {Requests} from "../../interfaces/requests.interface";
+import IRequest = Requests.IRequest;
 
 @Component({
   selector: 'app-request-card',
@@ -7,7 +8,7 @@ import {IRequestData} from "../request-form/request-form.component";
   styleUrls: ['./request-card.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class RequestCardComponent{
-  @Input() cardData!: IRequestData
+export class RequestCardComponent {
+  @Input() cardData!: IRequest
   currentDate = new Date();
 }
