@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {Contacts} from "../../interfaces/contacts.interface";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
@@ -14,7 +14,6 @@ import IContactsData = Contacts.IContactsData;
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
   styleUrls: ['./contacts.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContactsComponent implements OnInit {
   contactsData!: IContactsData;
@@ -31,7 +30,6 @@ export class ContactsComponent implements OnInit {
     private searchService: SearchService,
     private dictionaryService: DictionaryService,
     private userService: UserService,
-    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
@@ -53,7 +51,6 @@ export class ContactsComponent implements OnInit {
       .subscribe(response => {
       this.searchResultsCount = Number(response.headers.get('X-Total-Count'));
       this.sliceResult = response.body;
-      this.cdr.markForCheck();
     })
   }
 
@@ -63,14 +60,15 @@ export class ContactsComponent implements OnInit {
     if (this.searchResultsCount && endIdx > this.searchResultsCount) {
       endIdx = this.searchResultsCount;
     }
-    this.searchService.basicSearch(this.basicForm.value.search, startIdx, endIdx).subscribe(response => this.sliceResult = response.body)
+    this.searchService.basicSearch(
+      this.basicForm.value.search, startIdx, endIdx)
+      .subscribe(response => this.sliceResult = response.body)
   }
 
   changeUser(event: IEmployee) {
     this.userService.changeUser(event).subscribe(() => {
       this.userService.getCurrentUser().subscribe(user => {
-        this.currentUser = user
-        this.cdr.markForCheck()
+        this.currentUser = user;
       });
     })
   }

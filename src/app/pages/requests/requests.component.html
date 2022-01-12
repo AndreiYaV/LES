@@ -4,14 +4,14 @@
       <div class="request__new-title">New request</div>
       <app-request-form
         [requestTypes]="requestTypes"
-        (requestData)="getRequest($event)"
+        (requestData)="sendRequest($event)"
       ></app-request-form>
     </div>
     <div class="request__active">
       <div class="request__active-title">Active requests</div>
       <div class="request__active-wrapper">
         <app-request
-          [data]="requestData$$"
+          [requests]="requests"
         ></app-request>
       </div>
     </div>

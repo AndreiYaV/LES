@@ -1,8 +1,9 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {Requests} from "../../interfaces/requests.interface";
-import {Observable, Subject} from "rxjs";
 import IRequestType = Requests.IRequestType;
+import {RequestService} from "../../services/request.service";
+import {UserService} from "../../services/user.service";
 
 @Component({
   selector: 'app-requests',
@@ -12,17 +13,33 @@ import IRequestType = Requests.IRequestType;
 })
 export class RequestsComponent implements OnInit {
   requestTypes: IRequestType[] = [];
+  requests: Requests.IRequest[] = [];
 
-  private requestData$: Subject<any> = new Subject<any>();
-  public requestData$$: Observable<any> = this.requestData$ as Observable<any>;
-
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private requestService: RequestService,
+    private cdr: ChangeDetectorRef,
+    private userService: UserService
+  ) {}
 
   ngOnInit(): void {
     this.requestTypes = this.route.snapshot.data.requests
+    this.requestService.getRequests()
+      .subscribe(req => {
+        (this.requests as any) = req.requests
+        this.cdr.markForCheck()
+      })
   }
 
-  getRequest(event: any) {
-    this.requestData$.next(event)
+  sendRequest(req: any) {
+    this.userService.getCurrentUser().subscribe(user => {
+      if (user.requests) {
+        user.requests.push(req)
+        this.requestService.createRequest(user as any).subscribe(() => {
+          this.requestService.getRequests()
+            .subscribe(req => (this.requests as any) = req.requests)
+        })
+      }
+    })
   }
 }
