@@ -10,7 +10,9 @@
       <p>created: {{currentDate | date : ' dd LLL yyyy '}}</p>
     </div>
     <div class="request__card-action">
-      <app-edit-menu></app-edit-menu>
+      <app-edit-menu
+        [cardData]="cardData"
+      ></app-edit-menu>
     </div>
   </div>
 </div>
