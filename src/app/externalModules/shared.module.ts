@@ -12,6 +12,7 @@ import {MatNativeDateModule} from "@angular/material/core";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {MatMenuModule} from "@angular/material/menu";
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [],
@@ -31,6 +32,7 @@ import {MatMenuModule} from "@angular/material/menu";
     MatPaginatorModule,
     MatButtonModule,
     MatMenuModule,
+    MatDialogModule,
   ],
   exports: [
     BrowserModule,
@@ -48,6 +50,7 @@ import {MatMenuModule} from "@angular/material/menu";
     MatPaginatorModule,
     MatButtonModule,
     MatMenuModule,
+    MatDialogModule,
   ]
 })
 export class SharedModule{}

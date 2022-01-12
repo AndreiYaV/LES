@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {Requests} from "../../interfaces/requests.interface";
 import IRequestType = Requests.IRequestType;
@@ -9,7 +9,6 @@ import {UserService} from "../../services/user.service";
   selector: 'app-requests',
   templateUrl: './requests.component.html',
   styleUrls: ['./requests.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RequestsComponent implements OnInit {
   requestTypes: IRequestType[] = [];
@@ -18,7 +17,6 @@ export class RequestsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private requestService: RequestService,
-    private cdr: ChangeDetectorRef,
     private userService: UserService
   ) {}
 
@@ -27,19 +25,21 @@ export class RequestsComponent implements OnInit {
     this.requestService.getRequests()
       .subscribe(req => {
         (this.requests as any) = req.requests
-        this.cdr.markForCheck()
       })
   }
 
   sendRequest(req: any) {
     this.userService.getCurrentUser().subscribe(user => {
+      console.log(user)
       if (user.requests) {
         user.requests.push(req)
+      }else {
+        user.requests = [req]
+      }
         this.requestService.createRequest(user as any).subscribe(() => {
           this.requestService.getRequests()
             .subscribe(req => (this.requests as any) = req.requests)
         })
-      }
     })
   }
 }

@@ -13,6 +13,9 @@ import { RequestCardComponent } from "./components/request-card/request-card.com
 import { DatepickerComponent } from './components/form/datepicker/datepicker.component';
 import { DiffDatePipe } from './pipes/diff-date.pipe';
 import { EditMenuComponent } from './components/edit-menu/edit-menu.component';
+import {ModalConfirmComponent} from './components/modals/modal-confirm/modal-confirm.component';
+import { ModalEditComponent } from './components/modals/modal-edit/modal-edit.component';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +32,8 @@ import { EditMenuComponent } from './components/edit-menu/edit-menu.component';
     DatepickerComponent,
     DiffDatePipe,
     EditMenuComponent,
+    ModalConfirmComponent,
+    ModalEditComponent,
   ],
   imports: [
     SharedModule,
