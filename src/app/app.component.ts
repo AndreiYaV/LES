@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {UserService} from "./services/user.service";
-import {DefaultUser} from "./classes/defaultUser";
 import {IEmployee} from "./interfaces/employee.interface";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -9,13 +9,14 @@ import {IEmployee} from "./interfaces/employee.interface";
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  currentUser: IEmployee = new DefaultUser();
+  currentUser$!: Observable<IEmployee>;
 
   constructor(
-    private user: UserService,
+    private userService: UserService,
     ) {}
 
   ngOnInit(): void {
-    this.user.getCurrentUser().subscribe(user => this.currentUser = user)
+    this.userService.getCurrentUser()
+    this.currentUser$ = this.userService.currentUser$
   }
 }

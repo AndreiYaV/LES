@@ -9,8 +9,8 @@
       <button
         *ngIf="_data.is_active"
         (click)="changeUser(_data)"
-        [disabled]="currentUser.id === _data.id"
-      >{{currentUser.id === _data.id ? 'Active' : 'Log in as'}}</button>
+        [disabled]="(currentUser$ | async)?.id === _data.id"
+      >{{(currentUser$ | async)?.id === _data.id ? 'Active' : 'Log in as'}}</button>
     </div>
   </div>
 </div>

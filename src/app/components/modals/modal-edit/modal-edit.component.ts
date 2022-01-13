@@ -9,13 +9,12 @@ import {MAT_DIALOG_DATA} from "@angular/material/dialog";
   styleUrls: ['./modal-edit.component.scss']
 })
 export class ModalEditComponent implements OnInit {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: IRequestType[]) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: IRequestType[]) {}
 
   ngOnInit(): void {
     console.log(this.data)
   }
 
   sendRequest($event: Requests.IRequest) {
-    console.log('edit')
   }
 }

@@ -2,16 +2,17 @@
   <div class="request__card-wrapper">
     <div class="request__card-data">
       <div class="request__card-title">
-        <div class="type">{{cardData.type_id}}: </div>
-        <div class="start">{{cardData.start_date | date : ' dd LLL yyyy '}} - </div>
-        <div class="end">{{cardData.end_date | date : ' dd LLL yyyy '}}</div>
-        <div class="days"> ({{cardData.days}} days)</div>
+        <div class="type">{{requestTypes}}: </div>
+        <div class="start">{{_cardData.start_date | date : ' dd LLL yyyy '}} - </div>
+        <div class="end">{{_cardData.end_date | date : ' dd LLL yyyy '}}</div>
+        <div class="days"> ({{_cardData.days}} days)</div>
       </div>
       <p>created: {{currentDate | date : ' dd LLL yyyy '}}</p>
     </div>
     <div class="request__card-action">
       <app-edit-menu
-        [cardData]="cardData"
+        [cardData]="_cardData"
+        (valueChange)="valueChange($event)"
       ></app-edit-menu>
     </div>
   </div>

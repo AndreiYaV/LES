@@ -20,4 +20,10 @@ export class SearchService {
     (`${PATH}/employee?q=${req}&${this.queryParamsSort}${this.paginationStart}${start}${this.paginationStop}${stop}`,
       {observe: 'response'})
   }
+
+  advancedSearch( start: number, stop: number, firsName?: string, lastName?: string, room?: string) {
+    return this.http.get<IEmployee[]>
+    (`${PATH}/employee?q=${firsName}&${lastName}&${room}&${this.queryParamsSort}${this.paginationStart}${start}${this.paginationStop}${stop}`,
+      {observe: 'response'})
+  }
 }

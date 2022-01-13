@@ -3,6 +3,7 @@ import {IEmployee} from "../../interfaces/employee.interface";
 import {DictionaryService} from "../../services/dictionary.service";
 import {Contacts} from "../../interfaces/contacts.interface";
 import IDepartment = Contacts.IDepartment;
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-card',
@@ -16,7 +17,7 @@ export class CardComponent {
     this.department = this.dictionaryService.getData('departments')
       .find(department => department.id === employee.department)?.name
   }
-  @Input() currentUser!: IEmployee;
+  @Input() currentUser$!: Observable<IEmployee>;
   @Output() changeCurrentUser: EventEmitter<IEmployee> = new EventEmitter<IEmployee>();
   _data!: IEmployee;
   department!: IDepartment;
