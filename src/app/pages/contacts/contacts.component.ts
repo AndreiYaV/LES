@@ -9,6 +9,8 @@ import {PAGINATION_OPTIONS} from "../../constants/pagination.constants.";
 import {DictionaryService} from "../../services/dictionary.service";
 import {UserService} from "../../services/user.service";
 import IContactsData = Contacts.IContactsData;
+import {Observable} from "rxjs";
+import {IAdvancedSearch} from "../../components/advanced-search/advanced-search.component";
 
 @Component({
   selector: 'app-contacts',
@@ -21,7 +23,7 @@ export class ContactsComponent implements OnInit {
   basicForm!: FormGroup;
   changeView = false;
   sliceResult: IEmployee[] | null = [];
-  currentUser!: IEmployee;
+  currentUser$!: Observable<IEmployee>;
   readonly PAGINATION_OPTIONS = PAGINATION_OPTIONS;
 
   constructor(
@@ -33,7 +35,7 @@ export class ContactsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.userService.getCurrentUser().subscribe(user => this.currentUser = user);
+    this.currentUser$ = this.userService.currentUser$
     this.contactsData = this.route.snapshot.data.contacts;
     this.dictionaryService.setData('departments', this.route.snapshot.data.contacts.departments);
     this.basicForm = this.fb.group({
@@ -54,6 +56,16 @@ export class ContactsComponent implements OnInit {
     })
   }
 
+  advancedSearch(event: IAdvancedSearch) {
+    const {firstName, lastName, room} = event
+    this.changeView = true;
+    this.searchService.advancedSearch(0, PAGINATION_OPTIONS.PAGE_SIZE, firstName, lastName, room)
+      .subscribe(response => {
+        this.searchResultsCount = Number(response.headers.get('X-Total-Count'));
+        this.sliceResult = response.body;
+      })
+  }
+
   onPageChange(event: PageEvent) {
     const startIdx = event.pageIndex * event.pageSize;
     let endIdx = startIdx + event.pageSize;
@@ -67,9 +79,7 @@ export class ContactsComponent implements OnInit {
 
   changeUser(event: IEmployee) {
     this.userService.changeUser(event).subscribe(() => {
-      this.userService.getCurrentUser().subscribe(user => {
-        this.currentUser = user;
-      });
+      this.userService.getCurrentUser()
     })
   }
 }

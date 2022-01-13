@@ -10,9 +10,11 @@
     <div class="request__active">
       <div class="request__active-title">Active requests</div>
       <div class="request__active-wrapper">
-        <app-request
-          [requests]="requests"
-        ></app-request>
+            <app-request-card
+              *ngFor="let card of requests"
+              [cardData]="card"
+              (updateChange)="updateChange($event)"
+            ></app-request-card>
       </div>
     </div>
   </div>

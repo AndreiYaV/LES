@@ -1,7 +1,15 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {Contacts} from "../../interfaces/contacts.interface";
 import IContactsData = Contacts.IContactsData;
+
+export interface IAdvancedSearch {
+  building?: string;
+  department?: string;
+  firstName?: string;
+  lastName?: string;
+  room?: string;
+}
 
 @Component({
   selector: 'app-advanced-search',
@@ -11,11 +19,14 @@ import IContactsData = Contacts.IContactsData;
 })
 export class AdvancedSearchComponent implements OnInit {
   @Input() data!: IContactsData;
+  @Output() advancedSearchSubmit: EventEmitter<IAdvancedSearch> = new EventEmitter<IAdvancedSearch>()
   advancedSearch!: FormGroup;
   department = new FormControl('');
   building: FormControl = new FormControl('');
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder
+  ) {}
 
   ngOnInit(): void {
     this.advancedSearch = this.fb.group({
@@ -28,7 +39,6 @@ export class AdvancedSearchComponent implements OnInit {
     this.advancedSearch.valueChanges.subscribe(value => {
       console.log('FORM VALUES CHANGE:', value)
     });
-
   }
 
   get buildingValue() {
@@ -36,11 +46,10 @@ export class AdvancedSearchComponent implements OnInit {
   }
 
   searchSubmit() {
-    const {firstName, lastName, room, } = this.advancedSearch.value
+    const {firstName, lastName, room } = this.advancedSearch.value
     if (!firstName && !lastName && !room) {
       return
     }
-
-    console.log(this.advancedSearch.value)
+    this.advancedSearchSubmit.emit(this.advancedSearch.value)
   }
 }

@@ -8,7 +8,6 @@ import { SharedModule } from "./externalModules/shared.module";
 import { SearchSelectComponent } from './components/form/search-select/search-select.component';
 import { RequestFormComponent } from './components/request-form/request-form.component';
 import { CardComponent } from './components/card/card.component';
-import { RequestComponent } from './components/request/request.component';
 import { RequestCardComponent } from "./components/request-card/request-card.component";
 import { DatepickerComponent } from './components/form/datepicker/datepicker.component';
 import { DiffDatePipe } from './pipes/diff-date.pipe';
@@ -27,7 +26,6 @@ import { ModalEditComponent } from './components/modals/modal-edit/modal-edit.co
     SearchSelectComponent,
     RequestFormComponent,
     CardComponent,
-    RequestComponent,
     RequestCardComponent,
     DatepickerComponent,
     DiffDatePipe,

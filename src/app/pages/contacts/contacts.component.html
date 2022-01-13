@@ -4,7 +4,7 @@
       <div *ngIf="!changeView; else searchResult"
         class="searchSm__img"
       >
-        <img *ngIf="!advancedSearch.isActive"
+        <img *ngIf="!advancedSearchTemplate.isActive"
              src="./assets/images/SearchEmployee_Left.png" alt="left">
         <div class="searchSm__title">
           <span>Find Your Colleagues</span>
@@ -22,10 +22,11 @@
               </form>
             </div>
           </mat-tab>
-          <mat-tab label="ADVANCED SEARCH" #advancedSearch>
+          <mat-tab label="ADVANCED SEARCH" #advancedSearchTemplate>
             <div class="search-wrapper">
               <app-advanced-search
                 [data]="contactsData"
+                (advancedSearchSubmit)="advancedSearch($event)"
               ></app-advanced-search>
             </div>
           </mat-tab>
@@ -49,7 +50,7 @@
           class="card"
           *ngFor="let card of sliceResult"
           [data]="card"
-          [currentUser]="currentUser"
+          [currentUser$]="currentUser$"
           (changeCurrentUser)="changeUser($event)"
         ></app-card>
       </div>

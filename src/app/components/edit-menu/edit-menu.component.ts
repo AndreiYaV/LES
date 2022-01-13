@@ -1,12 +1,13 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {Requests} from "../../interfaces/requests.interface";
-import IRequest = Requests.IRequest;
 import {ModalConfirmComponent} from "../modals/modal-confirm/modal-confirm.component";
 import {ModalEditComponent} from "../modals/modal-edit/modal-edit.component";
 import {ActivatedRoute} from "@angular/router";
-import IRequestType = Requests.IRequestType;
 import {RequestService} from "../../services/request.service";
+import IRequest = Requests.IRequest;
+import IRequestType = Requests.IRequestType;
+import {IEmployee} from "../../interfaces/employee.interface";
 
 @Component({
   selector: 'app-edit-menu',
@@ -14,7 +15,8 @@ import {RequestService} from "../../services/request.service";
   styleUrls: ['./edit-menu.component.scss'],
 })
 export class EditMenuComponent implements OnInit {
-  @Input() cardData!: IRequest
+  @Input() cardData!: IRequest;
+  @Output() valueChange: EventEmitter<IEmployee> = new EventEmitter<IEmployee>()
   requestTypes: IRequestType[] = [];
 
   constructor(
@@ -33,8 +35,13 @@ export class EditMenuComponent implements OnInit {
     const dialogRef = this.dialog.open(ModalConfirmComponent, {
       data: this.cardData.id
     });
+
     dialogRef.afterClosed().subscribe(data => {
-      this.requestService.deleteRequest(data).subscribe()
+      this.requestService.getRequests().subscribe(request => {
+        request.requests = request.requests?.filter((request) => request.id !== data)
+        this.requestService.createRequest(request as any)
+          .subscribe(() => this.valueChange.emit(request))
+      })
     })
   }
 
