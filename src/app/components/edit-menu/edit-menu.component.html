@@ -3,9 +3,9 @@
 </button>
 <mat-menu #menu="matMenu">
   <button mat-menu-item>
-    <span (click)="openDialogEdit()">Edit</span>
+    <span (click)="openDialog(MODAL_TYPES.EDIT)">Edit</span>
   </button>
   <button mat-menu-item>
-    <span (click)="openDialogDelete()">Delete</span>
+    <span (click)="openDialog(MODAL_TYPES.DELETE)">Delete</span>
   </button>
 </mat-menu>

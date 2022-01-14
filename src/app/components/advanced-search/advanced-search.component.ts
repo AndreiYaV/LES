@@ -34,7 +34,7 @@ export class AdvancedSearchComponent implements OnInit {
       lastName: ['', [Validators.minLength(3)]],
       department: this.department,
       building: this.building,
-      room: [{value: '', disabled: this.buildingValue}]
+      room: [{value: '', disabled: false}]
     })
     this.advancedSearch.valueChanges.subscribe(value => {
       console.log('FORM VALUES CHANGE:', value)

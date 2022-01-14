@@ -14,6 +14,9 @@ import { DiffDatePipe } from './pipes/diff-date.pipe';
 import { EditMenuComponent } from './components/edit-menu/edit-menu.component';
 import {ModalConfirmComponent} from './components/modals/modal-confirm/modal-confirm.component';
 import { ModalEditComponent } from './components/modals/modal-edit/modal-edit.component';
+import { TableComponent } from './components/table/table.component';
+import {MatTableModule} from "@angular/material/table";
+import { TransformDataPipe } from './pipes/transform-data.pipe';
 
 
 @NgModule({
@@ -32,9 +35,12 @@ import { ModalEditComponent } from './components/modals/modal-edit/modal-edit.co
     EditMenuComponent,
     ModalConfirmComponent,
     ModalEditComponent,
+    TableComponent,
+    TransformDataPipe,
   ],
   imports: [
     SharedModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

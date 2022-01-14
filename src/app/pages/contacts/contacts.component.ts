@@ -11,6 +11,7 @@ import {UserService} from "../../services/user.service";
 import IContactsData = Contacts.IContactsData;
 import {Observable} from "rxjs";
 import {IAdvancedSearch} from "../../components/advanced-search/advanced-search.component";
+import IDepartment = Contacts.IDepartment;
 
 @Component({
   selector: 'app-contacts',
@@ -24,6 +25,8 @@ export class ContactsComponent implements OnInit {
   changeView = false;
   sliceResult: IEmployee[] | null = [];
   currentUser$!: Observable<IEmployee>;
+  departments: IDepartment[] = [];
+  view = false;
   readonly PAGINATION_OPTIONS = PAGINATION_OPTIONS;
 
   constructor(
@@ -37,6 +40,7 @@ export class ContactsComponent implements OnInit {
   ngOnInit(): void {
     this.currentUser$ = this.userService.currentUser$
     this.contactsData = this.route.snapshot.data.contacts;
+    this.departments = this.route.snapshot.data.contacts.departments;
     this.dictionaryService.setData('departments', this.route.snapshot.data.contacts.departments);
     this.basicForm = this.fb.group({
       search: ['', [Validators.required, Validators.minLength(3)]]
