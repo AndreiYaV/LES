@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import IRequestType = Requests.IRequestType;
-import IRequest = Requests.IRequest;
 import {PATH} from "../../global";
 import {Requests} from "../interfaces/requests.interface";
 import {IEmployee} from "../interfaces/employee.interface";
@@ -21,8 +20,8 @@ export class RequestService {
     return this.http.get<IEmployee>(`${PATH}/current_user`)
   }
 
-  public createRequest(req: IRequest): Observable<IRequest> {
-    return this.http.patch<IRequest>(`${PATH}/current_user?requests=:requests`, req);
+  public createRequest(req: IEmployee): Observable<IEmployee> {
+    return this.http.patch<IEmployee>(`${PATH}/current_user?requests=:requests`, req);
   }
 
   public deleteRequest(id: string): Observable<any> {

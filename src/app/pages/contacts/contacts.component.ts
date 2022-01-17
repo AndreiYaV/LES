@@ -26,7 +26,7 @@ export class ContactsComponent implements OnInit {
   sliceResult: IEmployee[] | null = [];
   currentUser$!: Observable<IEmployee>;
   departments: IDepartment[] = [];
-  view = false;
+  view = true;
   readonly PAGINATION_OPTIONS = PAGINATION_OPTIONS;
 
   constructor(

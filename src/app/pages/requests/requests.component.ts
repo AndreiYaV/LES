@@ -6,6 +6,7 @@ import {RequestService} from "../../services/request.service";
 import {UserService} from "../../services/user.service";
 import {DictionaryService} from "../../services/dictionary.service";
 import IRequest = Requests.IRequest;
+import {switchMap, tap} from "rxjs/operators";
 
 @Component({
   selector: 'app-requests',
@@ -14,7 +15,7 @@ import IRequest = Requests.IRequest;
 })
 export class RequestsComponent implements OnInit {
   requestTypes: IRequestType[] = [];
-  requests: IRequest[] = [];
+  requests: Requests.IRequest[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -28,18 +29,24 @@ export class RequestsComponent implements OnInit {
     this.dictionaryService.setData('requestTypes', this.requestTypes)
     this.requestService.getRequests()
       .subscribe(req => {
-        (this.requests as any) = req.requests
+        (this.requests as IRequest[] | undefined) = req.requests
       })
   }
 
-  sendRequest(req: any) {
-    this.userService.currentUser$.subscribe(user => {
-      user.requests ? user.requests.push(req) : user.requests = [req];
-        this.requestService.createRequest(user as any).subscribe(() => {
-          this.requestService.getRequests()
-            .subscribe(req => (this.requests as any) = req.requests)
-        })
-    })
+  sendRequest(req: IRequest) {
+    this.userService.currentUser$.pipe(
+      tap(user => {
+        if (user.requests) {
+          user.requests.push(req)
+        } else {
+          user.requests = [req]
+        }
+      }),
+      switchMap(user => this.requestService.createRequest(user).pipe(
+        tap(response => {
+          (this.requests as IRequest[] | undefined) = response.requests
+        })))
+    ).subscribe()
   }
 
   updateChange(event: any) {

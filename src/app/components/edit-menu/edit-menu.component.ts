@@ -27,13 +27,13 @@ export class EditMenuComponent implements OnInit {
     private requestService: RequestService
   ) {}
 
-  openDialogEdit() {
+  private openDialogEdit() {
     this.dialog.open(ModalEditComponent, {
       data: this.requestTypes
     });
   }
 
-  openDialogDelete() {
+  private openDialogDelete() {
     const dialogRef = this.dialog.open(ModalConfirmComponent, {
       data: this.cardData.id
     });
@@ -51,7 +51,7 @@ export class EditMenuComponent implements OnInit {
     this.requestTypes = this.route.snapshot.data.requests;
   }
 
-  openDialog(value: any) {
+  openDialog(value: MODAL_TYPES): void {
     switch(value) {
       case (MODAL_TYPES.EDIT): {
         this.openDialogEdit()
