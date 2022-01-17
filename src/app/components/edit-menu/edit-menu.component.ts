@@ -9,6 +9,8 @@ import IRequest = Requests.IRequest;
 import IRequestType = Requests.IRequestType;
 import {IEmployee} from "../../interfaces/employee.interface";
 import {MODAL_TYPES} from "../../constants/modal-types";
+import {UserService} from "../../services/user.service";
+import {switchMap, tap} from "rxjs/operators";
 
 @Component({
   selector: 'app-edit-menu',
@@ -24,13 +26,17 @@ export class EditMenuComponent implements OnInit {
   constructor(
     public dialog: MatDialog,
     private route: ActivatedRoute,
-    private requestService: RequestService
+    private requestService: RequestService,
+    private userService: UserService
   ) {}
 
   private openDialogEdit() {
-    this.dialog.open(ModalEditComponent, {
+    const dialogRef = this.dialog.open(ModalEditComponent, {
       data: this.requestTypes
     });
+    dialogRef.afterClosed().subscribe(data => {
+      console.log(data)
+    })
   }
 
   private openDialogDelete() {
@@ -39,11 +45,13 @@ export class EditMenuComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(data => {
-      this.requestService.getRequests().subscribe(request => {
-        request.requests = request.requests?.filter((request) => request.id !== data)
-        this.requestService.createRequest(request as any)
-          .subscribe(() => this.valueChange.emit(request))
-      })
+      this.userService.currentUser$.pipe(
+        tap(user => {
+          user.requests = user.requests?.filter((request) => request.id !== data)
+        }),
+        switchMap(user => this.requestService.createRequest(user)),
+        switchMap(user => this.userService.addUserRequest(user)),
+      ).subscribe(() => this.valueChange.emit(data))
     })
   }
 
