@@ -21,10 +21,6 @@ export class RequestService {
   }
 
   public createRequest(req: IEmployee): Observable<IEmployee> {
-    return this.http.patch<IEmployee>(`${PATH}/current_user?requests=:requests`, req);
-  }
-
-  public deleteRequest(id: string): Observable<any> {
-    return this.http.delete(`${PATH}/current_user.requests/${id}`)
+    return this.http.patch<IEmployee>(`${PATH}/current_user?requests`, req);
   }
 }
