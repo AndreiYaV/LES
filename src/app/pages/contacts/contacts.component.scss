@@ -117,5 +117,9 @@
       flex: 0 1 32%;
     }
   }
+}
 
+.menu-paginator {
+  display: flex;
+  justify-content: flex-end;
 }

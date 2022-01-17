@@ -8,6 +8,7 @@ import {RequestService} from "../../services/request.service";
 import IRequest = Requests.IRequest;
 import IRequestType = Requests.IRequestType;
 import {IEmployee} from "../../interfaces/employee.interface";
+import {MODAL_TYPES} from "../../constants/modal-types";
 
 @Component({
   selector: 'app-edit-menu',
@@ -18,6 +19,7 @@ export class EditMenuComponent implements OnInit {
   @Input() cardData!: IRequest;
   @Output() valueChange: EventEmitter<IEmployee> = new EventEmitter<IEmployee>()
   requestTypes: IRequestType[] = [];
+  MODAL_TYPES = MODAL_TYPES;
 
   constructor(
     public dialog: MatDialog,
@@ -25,13 +27,13 @@ export class EditMenuComponent implements OnInit {
     private requestService: RequestService
   ) {}
 
-  openDialogEdit() {
+  private openDialogEdit() {
     this.dialog.open(ModalEditComponent, {
       data: this.requestTypes
     });
   }
 
-  openDialogDelete() {
+  private openDialogDelete() {
     const dialogRef = this.dialog.open(ModalConfirmComponent, {
       data: this.cardData.id
     });
@@ -47,5 +49,18 @@ export class EditMenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.requestTypes = this.route.snapshot.data.requests;
+  }
+
+  openDialog(value: MODAL_TYPES): void {
+    switch(value) {
+      case (MODAL_TYPES.EDIT): {
+        this.openDialogEdit()
+        break;
+      }
+      case (MODAL_TYPES.DELETE): {
+        this.openDialogDelete()
+        break;
+      }
+    }
   }
 }
