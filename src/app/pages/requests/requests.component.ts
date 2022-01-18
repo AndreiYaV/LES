@@ -47,6 +47,7 @@ export class RequestsComponent implements OnInit {
   }
 
   sendRequest(req: IRequest) {
+   this.clearRequests()
     this.userService.currentUser$.pipe(
       tap(user => {
         if (user.requests) {
@@ -61,12 +62,20 @@ export class RequestsComponent implements OnInit {
         }))),
       switchMap(user => this.userService.addUserRequest(user).pipe(
       ))
-    ).subscribe()
+    ).subscribe(() => this.sortRequests(this.requests))
   }
 
   updateChange(event: any) {
+    this.clearRequests()
     this.requestService.getRequests().subscribe( response => {
         (this.requests as any) = response.requests
+      this.sortRequests(this.requests)
     })
+  }
+
+  clearRequests() {
+    this.requests = [];
+    this.actualRequests = [];
+    this.passedRequests = [];
   }
 }
