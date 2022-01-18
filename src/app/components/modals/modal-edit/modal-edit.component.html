@@ -1,4 +1,6 @@
 <app-request-form
+  [formView]="false"
   [requestTypes]="data"
   (requestData)="sendRequest($event)"
+  (onClose)="closeModal($event)"
 ></app-request-form>

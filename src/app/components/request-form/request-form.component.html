@@ -35,5 +35,12 @@
   <div class="form-group">
     <textarea name="message" formControlName="comment"></textarea>
   </div>
-  <button type="submit" class="form__btn" [disabled]="requestForm.invalid">SUBMIT</button>
+  <div class="confirm-menu" *ngIf="formView; else modalView">
+    <button type="submit" class="form__btn" [disabled]="requestForm.invalid">SUBMIT</button>
+  </div>
 </form>
+
+<ng-template #modalView>
+  <button mat-button type="submit" [mat-dialog-close]="requestForm">Update</button>
+  <button mat-button mat-dialog-close (click)="onNoClick()">No</button>
+</ng-template>

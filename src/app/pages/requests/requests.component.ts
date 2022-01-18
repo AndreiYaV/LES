@@ -38,7 +38,7 @@ export class RequestsComponent implements OnInit {
 
   private sortRequests(requests: IRequest[]): IRequest[] {
     return requests.filter(request => {
-      if (new Date(request.end_date).getTime() > Date.now()) {
+      if (new Date(request.end_date).getTime() >= Date.now()) {
         this.actualRequests.push(request)
       } else {
         this.passedRequests.push(request)
