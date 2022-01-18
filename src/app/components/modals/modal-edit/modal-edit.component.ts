@@ -1,7 +1,7 @@
 import {Component, Inject} from '@angular/core';
 import {Requests} from "../../../interfaces/requests.interface";
 import IRequestType = Requests.IRequestType;
-import {MAT_DIALOG_DATA} from "@angular/material/dialog";
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-modal-edit',
@@ -9,9 +9,15 @@ import {MAT_DIALOG_DATA} from "@angular/material/dialog";
   styleUrls: ['./modal-edit.component.scss']
 })
 export class ModalEditComponent {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: IRequestType[]) {}
+  constructor(
+    public dialogRef: MatDialogRef<string>,
+    @Inject(MAT_DIALOG_DATA) public data: IRequestType[]
+  ) {}
 
   sendRequest(event: Requests.IRequest) {
-    console.log(event)
+  }
+
+  closeModal($event: boolean) {
+    this.dialogRef.close()
   }
 }

@@ -35,7 +35,20 @@ export class EditMenuComponent implements OnInit {
       data: this.requestTypes
     });
     dialogRef.afterClosed().subscribe(data => {
-      console.log(data)
+      this.userService.currentUser$.pipe(
+        tap(user => {
+          const request = user.requests?.find(request => request.id === this.cardData.id);
+          const {comment, range: {start, end}, type_id} = data.value;
+          if (request) {
+            request.start_date = start;
+            request.end_date = end;
+            request.comment = comment;
+            request.type_id = type_id;
+          }
+        }),
+        switchMap(user => this.requestService.createRequest(user)),
+        switchMap(user => this.userService.addUserRequest(user)),
+      ).subscribe(() => this.valueChange.emit(data));
     })
   }
 

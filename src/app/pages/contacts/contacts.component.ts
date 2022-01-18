@@ -12,6 +12,7 @@ import IContactsData = Contacts.IContactsData;
 import {Observable} from "rxjs";
 import {IAdvancedSearch} from "../../components/advanced-search/advanced-search.component";
 import IDepartment = Contacts.IDepartment;
+import {tableColumns} from "../../constants/tableColumns";
 
 @Component({
   selector: 'app-contacts',
@@ -28,6 +29,7 @@ export class ContactsComponent implements OnInit {
   departments: IDepartment[] = [];
   view = true;
   readonly PAGINATION_OPTIONS = PAGINATION_OPTIONS;
+  readonly tableColumns = tableColumns;
 
   constructor(
     private route: ActivatedRoute,

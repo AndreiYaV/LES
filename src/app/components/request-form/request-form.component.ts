@@ -11,8 +11,10 @@ import IRequest = Requests.IRequest;
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RequestFormComponent implements OnInit {
+  @Input() formView: boolean = true;
   @Input() requestTypes!: IRequestType[];
   @Output() requestData:  EventEmitter<IRequest> = new EventEmitter<IRequest>()
+  @Output() onClose: EventEmitter<boolean> = new EventEmitter<boolean>()
 
   requestForm!: FormGroup;
   type_id!: FormControl;
@@ -54,5 +56,9 @@ export class RequestFormComponent implements OnInit {
             this.requestForm.controls.range.value.start)
         }
     this.requestData.emit(req)
+  }
+
+  onNoClick() {
+    this.onClose.emit(true)
   }
 }

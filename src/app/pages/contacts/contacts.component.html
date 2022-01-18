@@ -62,7 +62,10 @@
         <div class="table">
         <app-table
           [dataSource]="sliceResult"
-          [displayedColumns]="['name', 'last_name', 'department', 'room']"
+          [displayedColumns]="[tableColumns.Name,
+                              tableColumns.LastName,
+                              tableColumns.Department,
+                              tableColumns.Room]"
           [departments]="departments"
           [currentUser$]="currentUser$"
           (userChange)="changeUser($event)"
