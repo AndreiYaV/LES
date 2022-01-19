@@ -18,7 +18,6 @@ import { TableComponent } from './components/table/table.component';
 import {MatTableModule} from "@angular/material/table";
 import { TransformDataPipe } from './pipes/transform-data.pipe';
 
-
 @NgModule({
   declarations: [
     AppComponent,

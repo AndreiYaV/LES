@@ -5,7 +5,7 @@
         <div class="type">{{requestTypes}}: </div>
         <div class="start">{{_cardData.start_date | date : ' dd LLL yyyy '}} - </div>
         <div class="end">{{_cardData.end_date | date : ' dd LLL yyyy '}}</div>
-        <div class="days"> ({{_cardData.days}} days)</div>
+        <div class="days"> ({{_cardData.end_date | diffDate: _cardData.start_date}} days)</div>
       </div>
       <p>created: {{currentDate | date : ' dd LLL yyyy '}}</p>
     </div>
