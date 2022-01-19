@@ -63,9 +63,9 @@ export class ContactsComponent implements OnInit {
   }
 
   advancedSearch(event: IAdvancedSearch) {
-    const {firstName, lastName, room} = event
+    const {firstName, lastName, room, department} = event
     this.changeView = true;
-    this.searchService.advancedSearch(0, PAGINATION_OPTIONS.PAGE_SIZE, firstName, lastName, room)
+    this.searchService.advancedSearch(0, PAGINATION_OPTIONS.PAGE_SIZE, firstName, lastName, room, department)
       .subscribe(response => {
         this.searchResultsCount = Number(response.headers.get('X-Total-Count'));
         this.sliceResult = response.body;
