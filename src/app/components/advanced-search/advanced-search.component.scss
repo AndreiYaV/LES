@@ -58,6 +58,8 @@
     cursor: pointer;
     background: #5495ff;
     color: #fff;
+    outline: none;
+    border: none;
 
     &[disabled] {
       background-color: #a9d5ff;

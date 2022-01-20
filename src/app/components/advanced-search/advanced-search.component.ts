@@ -2,6 +2,7 @@ import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output}
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {Contacts} from "../../interfaces/contacts.interface";
 import IContactsData = Contacts.IContactsData;
+import {take} from "rxjs/operators";
 
 export interface IAdvancedSearch {
   building?: string;
@@ -37,14 +38,11 @@ export class AdvancedSearchComponent implements OnInit {
       room: [{value: "", disabled: true}],
     })
 
-    this.advancedSearch.valueChanges.subscribe(value => {
-      console.log('FORM VALUES CHANGE:', value)
-
-    });
-  }
-
-  get buildingValue() {
-    return this.advancedSearch?.controls?.building.value;
+    this.building.valueChanges.pipe(take(1)).subscribe(value => {
+      if (value) {
+        this.advancedSearch.controls.room.enable()
+      }
+    })
   }
 
   searchSubmit() {

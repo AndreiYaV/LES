@@ -19,6 +19,7 @@ export class RequestFormComponent implements OnInit {
   requestForm!: FormGroup;
   type_id!: FormControl;
   range!: FormGroup;
+  minimalValue: Date = new Date();
 
   constructor(
     private fb: FormBuilder,

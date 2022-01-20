@@ -13,7 +13,7 @@
     <div class="picker">
       <mat-label>Enter a date range</mat-label>
       <mat-form-field appearance="fill" class="date_picker">
-        <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+        <mat-date-range-input [formGroup]="range" [rangePicker]="picker" [min]="minimalValue">
           <input matStartDate formControlName="start" placeholder="Start date">
           <input matEndDate formControlName="end" placeholder="End date">
         </mat-date-range-input>
@@ -33,7 +33,7 @@
   </div>
 
   <div class="form-group">
-    <textarea name="message" formControlName="comment"></textarea>
+    <textarea class="text_comment" name="message" formControlName="comment"></textarea>
   </div>
   <div class="confirm-menu" *ngIf="formView; else modalView">
     <button type="submit" class="form__btn" [disabled]="requestForm.invalid">SUBMIT</button>

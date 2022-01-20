@@ -23,7 +23,7 @@ export class SearchService {
 
   advancedSearch( start: number, stop: number, firsName?: string, lastName?: string, room?: string, department?: string) {
     return this.http.get<IEmployee[]>
-    (`${PATH}/employee?name_like=${firsName}&last_name_like=${lastName}&q=${department}&q=${room}&${this.queryParamsSort}${this.paginationStart}${start}${this.paginationStop}${stop}`,
+    (`${PATH}/employee?name_like=${firsName}&last_name_like=${lastName}&department_like=${department}&${this.queryParamsSort}${this.paginationStart}${start}${this.paginationStop}${stop}`,
       {observe: 'response'})
   }
 }
