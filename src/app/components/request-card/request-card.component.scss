@@ -3,10 +3,23 @@
   margin: 10px;
   padding: 10px;
 
+  &-data {
+    p {
+      color: #797979;
+    }
+  }
+
   &-title {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 10px;
+
+    .type,
+    .start,
+    .end,
+    .days {
+      font-size: 16px;
+    }
   }
 
   &-wrapper {

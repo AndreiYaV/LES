@@ -54,12 +54,12 @@
   button {
     margin-top: 15px;
     width: 100%;
-    padding: 8px 12px;
     cursor: pointer;
     background: #5495ff;
     color: #fff;
     outline: none;
     border: none;
+    padding: 15px;
 
     &[disabled] {
       background-color: #a9d5ff;
