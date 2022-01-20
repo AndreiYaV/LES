@@ -13,6 +13,9 @@
   text-transform: uppercase;
   border: 1px solid #4c88e8;
   border-radius: 3px;
+  padding: 10px;
+  width: 100%;
+  margin-top: 15px;
 
   &[disabled] {
     background: #aecbff;
@@ -41,6 +44,6 @@ mat-label, label {
 
 .text_comment {
   resize: none;
-  width: 100%;
+  width: 98%;
   height: 70px;
 }
